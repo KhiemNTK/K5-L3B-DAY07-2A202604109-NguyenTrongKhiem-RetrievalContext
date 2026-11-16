@@ -1,0 +1,16 @@
+{
+  "verified_at_utc": "2026-11-16T02:54:42.802673+00:00",
+  "status": "passed",
+  "checks": {
+    "day6_checkout_from_git_archive": true,
+    "fresh_database_no_existing_volume": true,
+    "bootstrap_using_day6_runner": true,
+    "verified_B_chunks": 179,
+    "repacked_NPZ_accepted": true,
+    "changed_timing_report_accepted": true,
+    "numeric_vectors_unchanged": true
+  },
+  "source_archive_sha256": "098f82e59842b669e9ca1129190903575ef47f7cc168ace9971c3c8899b25d7b",
+  "manifest_sha256": "7c29fb095cafe7c1e8115e69880c716a1a9d68c80888e67ebac84b3a8b4fb33c",
+  "limits": "Reused installed Day 6 Python dependencies. Model download and a fresh package install were not tested."
+}

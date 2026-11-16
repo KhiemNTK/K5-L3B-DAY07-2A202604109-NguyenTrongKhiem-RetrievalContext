@@ -1,33 +1,69 @@
 # Day 7 — Agentic RAG
 
-**Bài cá nhân · Python 3.11+ · tiếp nối Day 6**
+Thí nghiệm dense, TF-IDF và hybrid retrieval trên dữ liệu Day 6. Hiện có benchmark và kết quả retrieval dev;
+agent dùng model trả lời, đánh giá test và báo cáo cuối chưa hoàn thành.
 
-Dùng embedding và vector store từ Day 6 để xây một agent biết tìm bằng chứng, trả lời có nguồn và nhận biết khi không đủ thông tin. Bạn tự chọn kiến trúc, số tool và cách tổ chức retrieval.
+## Dữ liệu
 
-> **Tùy chọn:** [Gợi ý dùng AI để lập trình](AGENT_SETUP.md) giúp bạn làm lab; phần này không bắt buộc và không tính điểm.
+| Thành phần | Cấu hình |
+|---|---|
+| Tài liệu | Git & GitHub Fundamentals — Student Edition, Hitesh Patel, Edition 1 (10/2026) |
+| Corpus | 53 trang nội dung, trang vật lý 5–57 trong PDF 65 trang |
+| Chunk | B: 179 đoạn, tối đa 500 ký tự, không overlap; chọn từ dev Day 6 |
+| Embedding | all-MiniLM-L6-v2, 384 chiều, L2; revision `1110a243fdf4706b3f48f1d95db1a4f5529b4d41` |
+| Vector store | PostgreSQL 16 + pgvector 0.8.7, cosine exact search |
+| Benchmark | Dev: 15 có đáp án + 2 thiếu evidence; test: 5 + 2 |
 
-## Bài cần làm
+[Chunk](data/chunks.json) giữ ID, text, nguồn, trang và metadata Day 6.
+[Manifest](data/day6.json) ghi nguồn, attribution CC BY-SA 4.0 và checksum; đường dẫn PDF phân giải từ repo Day 6.
+Text trích xuất/chuẩn hóa được chia sẻ tiếp theo CC BY-SA 4.0.
 
-![Agent tìm tài liệu trong kho Day 6 và trả lời có nguồn](assets/retrieval-pipeline.svg)
+## Cách chạy
 
-1. Kết nối dữ liệu, embedding và vector store Day 6.
-2. Xây agent dùng model thật và ít nhất một khả năng truy xuất dữ liệu. Agent có thể dùng nhiều tool và nhiều lượt gọi.
-3. Thử **ít nhất 3 phương pháp retrieval khác nhau**, trong đó có dense retrieval dùng vector store Day 6. Tự chọn các phương pháp còn lại; xem [gợi ý](GUIDE.md#2-thử-các-phương-pháp-retrieval).
-4. Thử nhiều cấu hình, benchmark, phân tích lỗi và chọn cấu hình tốt trên **dev**; sau đó đánh giá trên **test**.
+Môi trường đã kiểm chứng: Windows, Python 3.12 và dependency Day 6. Máy mới hoặc chưa có database:
+[làm theo hướng dẫn thiết lập](docs/README.md). Khi đã có môi trường Day 6, chạy từ gốc repo này:
 
-Benchmark tối thiểu có **24 câu**: dev gồm 15 câu có đáp án và 2 câu thiếu bằng chứng; test gồm 5 câu có đáp án và 2 câu thiếu bằng chứng. Xem [benchmark](BENCHMARK.md) và [rubric](RUBRIC.md).
+```powershell
+$day6Root = (Resolve-Path '../K5-L3B-DAY06-NguyenTrongKhiem-2A202604109-DataIngestion').Path
+$labPython = Join-Path $day6Root 'starter/.venv/Scripts/python.exe'
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
+docker compose -f starter/docker-compose.yml -p day7_retrieval up -d --wait
+$env:HF_HUB_OFFLINE = '1'
+& $labPython -X utf8 -B starter/benchmark.py
+& $labPython -X utf8 -B -m unittest discover -s tests -v
+& $labPython -X utf8 -B starter/retrieval.py --day6-root $day6Root --split dev
+```
 
-## Thử thách nâng cao · +15 điểm
+Compose dùng cổng local `15433` và volume Day 6. Dừng PostgreSQL Day 6 trước nếu cùng dùng volume này.
+Adapter truy vấn bằng session chỉ đọc; lệnh dừng dịch vụ là `docker compose -f starter/docker-compose.yml -p day7_retrieval stop`.
 
-Index một tài liệu thực tế từ **100 trang** có bảng, ảnh và biểu đồ; xây agent truy xuất và trả lời các câu hỏi về nội dung đó. Hoàn thành [thử thách nâng cao](ADVANCED.md) và đạt **ít nhất 90% benchmark test** để nhận 15 điểm bonus. Phần cơ bản tối đa 85 điểm; toàn bài tối đa 100 điểm.
+## Kết quả dev
 
-## Bắt đầu
+Cả ba phương pháp dùng cùng corpus, query gốc và filter Unit được nêu rõ trong câu hỏi.
+Hybrid dùng RRF `1 / (60 + rank)`, lấy 10 candidate mỗi thành phần, xuất top-3.
+Budget context preview là 2.400 ký tự, gồm ID/nguồn/trang.
 
-1. Đọc [hướng dẫn](GUIDE.md), [rubric](RUBRIC.md) và [quy tắc](RULES.md).
-2. Tạo repo cá nhân theo [cách nộp bài](SUBMISSION.md), chuẩn bị đầu ra Day 6 và model hỗ trợ tool calling.
-3. Dùng hoặc thay thế [starter](starter/README.md); bạn cần kết nối model và vector store thật.
-4. Chạy `python -m unittest discover -s tests -v`. Test mock chỉ kiểm tra code, không phải benchmark agent thật.
+[Lượt chạy 16/11/2026](results/retrieval/20261116T025510104675Z-dev/summary.json):
 
-![Các bước thử nghiệm trên dev và đánh giá trên test](assets/experiment-loop.svg)
+| Phương pháp | Hit@1 | Evidence Hit@3 | Context preview có evidence | Median/query |
+|---|---:|---:|---:|---:|
+| Dense | 12/15 (80%) | 13/15 (86,67%) | 13/15 (86,67%) | 31,65 ms |
+| TF-IDF | 13/15 (86,67%) | 15/15 (100%) | 15/15 (100%) | 0,41 ms |
+| Hybrid RRF | 13/15 (86,67%) | 14/15 (93,33%) | 14/15 (93,33%) | 25,02 ms |
 
-Nộp code, cách chạy, cấu hình, benchmark, trace và [báo cáo](report/individual/MSSV_HoTen.md). Thời gian ở [checkpoints](CHECKPOINTS.md) là gợi ý, có thể điều chỉnh theo lớp và phạm vi thử nghiệm.
+Mỗi phương pháp chạy đủ 17 câu, không có lỗi. Câu thiếu evidence không thuộc mẫu số retrieval metrics.
+Thời gian dense/hybrid gồm embedding query và kết nối DB; setup nằm riêng trong summary. Chi phí API bằng 0,
+không gồm điện/phần cứng. Trace giữ ranking, score, context và các bước thành phần của hybrid.
+
+**41/41 unit test pass.** [Kiểm tra tái lập](results/repro-check.json) đã dựng database mới từ checkout Day 6 đã commit,
+đối chiếu đủ 179 chunk B, thử đóng gói lại NPZ và thay telemetry với vector giữ nguyên. Lượt kiểm tra dùng lại dependency đã cài.
+
+## Giới hạn và phần còn lại
+
+TF-IDF đang tốt nhất trên retrieval dev. Context preview chưa phải context cuối gửi model;
+chưa có kết quả grounded answer, citation, abstention hoặc tool use của agent thật.
+Còn cần nối controller, thử ít nhất hai cấu hình cải thiện, chốt trên dev, đánh giá test và điền báo cáo cá nhân.
+Test chưa chạy retrieval. Reviewer nhãn là Codex; học viên chưa xác nhận. Corpus này chưa đủ 100 trang để làm bonus.
+
+[Bộ benchmark và cách chấm](benchmark/README.md) · [Starter](starter/README.md) ·
+[Hướng dẫn](GUIDE.md) · [Rubric](RUBRIC.md) · [Quy tắc](RULES.md) · [Cách nộp](SUBMISSION.md)

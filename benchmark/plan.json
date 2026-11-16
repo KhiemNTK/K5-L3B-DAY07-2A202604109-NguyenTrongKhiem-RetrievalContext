@@ -1,0 +1,37 @@
+{
+  "created_at_utc": "2026-11-15T16:07:37.418938+00:00",
+  "scope": "Basic Day 7; English questions match the English corpus.",
+  "split_policy": "Dev answers use Units 1-4; test answers use distinct Unit 5 topics. Test is authored and frozen before retrieval runs.",
+  "provenance": "15 Day 6 dev questions reused with exact raw evidence; no Day 6 test question is reused.",
+  "review": {
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "method": "All 20 answerable cases checked against PDF text; rendered pages 31 and 50-52 inspected for column/table layout. Four absence checks search all 53 indexed pages and inspect relevant sections."
+  },
+  "retrieval": {
+    "methods": [
+      "dense",
+      "tfidf",
+      "hybrid"
+    ],
+    "top_k": 3,
+    "context_budget_chars": 2400,
+    "hybrid_candidate_k": 10,
+    "rrf_k": 60,
+    "query_transformation": "none; original question only",
+    "filter_policy": "Only explicit Unit scope, shared unchanged by all methods."
+  },
+  "hit_rule": "One result must match source_id/page and contain a complete listed evidence quote. Gold entries are alternatives, not multi-hop requirements.",
+  "context_metric": "Packed-context evidence preview only; final agent context is not evaluated yet.",
+  "error_policy": "Keep every question and error in traces. Answerable errors remain in retrieval metric denominators.",
+  "selection_status": "Not selected; retrieval comparison is not final agent configuration selection.",
+  "dataset_revision": 2,
+  "dev_gold_corrections": [
+    {
+      "id": "D09",
+      "reason": "After the first dev run, source review confirmed a valid alternative in the upper-left panel of PDF page 31. No question, split, test label or retrieval parameter changed.",
+      "previous_dev_sha256": "3d81f78ed67974cf08bc9d11d47c29edbdb422feeb7bc502ba3a5d40d39cd745",
+      "previous_run_inputs": "results/retrieval/20261115T161027146771Z-dev/inputs"
+    }
+  ]
+}

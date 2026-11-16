@@ -1,0 +1,2508 @@
+[
+  {
+    "id": "5a3de1c46db6de2b9b424abbc353fecaf38a1a8198b0ee54705f8184398135d6",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 5,
+    "text": "    CHAPTER 1 · UNIT 1 · 4 HOURS\n    Introduction to Version Control\n\n    Why version control exists, the three kinds of VCS, and setting up Git and GitHub on Windows.\n\n      Local, centralized & distributed VCS  Benefits of Git & GitHub    Installing Git on Windows\n\n      git config   git help    Creating a GitHub account\n\n    Practise online: missions M-01, M-02\n\nThe Amroli Canteen problem",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 0,
+      "end_char": 394
+    }
+  },
+  {
+    "id": "d386b831d46f57c7a81dbd3a3b22bfdb9480810eb7adccc4db62f547224a7c19",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 5,
+    "text": "Meet four BCA final-year students at SBCCAS. For their project they are building Amroli\nCanteen, a web app that lets students order samosas and chai before the lunch break,\nso nobody waits in the queue.\n\n  Student            Builds\n\n  Krish              the menu and cart pages\n\n  Dhruvi             the order system in Python\n\n  Meet               the database\n\n  Hetvi              team lead: plans, reviews and writes the README",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 396,
+      "end_char": 827
+    }
+  },
+  {
+    "id": "e50e3be34c765ea85c648755c1bf895ae9b92147c051014b0a445e0590cf4891",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 5,
+    "text": "In the first two weeks they share code the way many students do: WhatsApp, pen\ndrives and email. Here is what happened.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 829,
+      "end_char": 948
+    }
+  },
+  {
+    "id": "7952a6eda9f6ec68d158d0317c7b77b740c6ef5846140b28120513595a78d715",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 6,
+    "text": "  1 · Lost work                         2 · File-name chaos                  3 · Overwritten work\n  Krish's login page worked              menu.html   ,  menu_v2.html    ,    Dhruvi and Krish both\n  on Monday. On Tuesday he               menu_FINAL.html     ,               edited   app.py   and sent it\n  \"improved\" it and broke it.            menu_FINAL_use_this.html       …    on WhatsApp. Whoever\n  Monday's version is gone.                                                  sent last \"won\".",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 0,
+      "end_char": 495
+    }
+  },
+  {
+    "id": "a1aeae544e33fc70205782a5aea141b67e069764dbd6c5bcf890e701928bfbb8",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 6,
+    "text": "  With Git                              With Git                             With Git\n  Every commit is a saved               One file name. History keeps         Changes are merged. If\n  snapshot. Krish can go                every version, with a message        two people edit the same\n  back to Monday's version              saying what changed.                 line, Git stops and asks a\n  in one command.                                                            human to decide.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 497,
+      "end_char": 982
+    }
+  },
+  {
+    "id": "1ef246355673e15949bb0ba82b0d11a4441466cd6366a8db121e0500e300c9b7",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 6,
+    "text": "  4 · Who broke it?                     5 · No backup\n  The total price shows ₹0.             Meet's laptop crashed a\n  Nobody knows when it                  week before the review.\n  broke or why.                         His database work was\n                                        only on that laptop.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 984,
+      "end_char": 1288
+    }
+  },
+  {
+    "id": "d75d33dd8ead3a8ac9da6cd740ba7bfb716613c56f0e9ca32e4e8a11c823fde9",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 6,
+    "text": "  With Git                              With Git + GitHub\n  The log shows who                     Every teammate and\n  changed what, when and                GitHub hold a full copy. A\n  why. You can find the                 crashed laptop costs\n  exact change.                         minutes, not weeks.\n\nHetvi, the team lead, says: \"Professional teams don't work like this. They use Git and\nGitHub. Let's learn it properly.\" That is exactly what you will do in this course.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 1290,
+      "end_char": 1765
+    }
+  },
+  {
+    "id": "d6b11e56fded9d08fb327d6a759844d518fd0083c6fba70046b2955a56d941c3",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 6,
+    "text": "What is version control?\n\nA version control system (VCS) is software that records changes to files over time, so\nyou can see who changed what and bring back any earlier version.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 1767,
+      "end_char": 1944
+    }
+  },
+  {
+    "id": "086116d282f887ba7a910ccea5209552d57fcf97c36ce2e627115b99de46594f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 7,
+    "text": "   🧠A time machine for your project\n\n   Think of a video game that saves your progress at every checkpoint. If you fall\n   into lava, you restart from the last checkpoint instead of from the beginning. A\n   VCS gives your code the same superpower, and each checkpoint is called a\n   commit.\n\nA VCS answers four questions about every change:\n\n   What changed? (exactly which lines)\n\n   Who changed it?\n\n   When was it changed?\n\n   Why? (the message the author wrote)\n\nThree kinds of version control",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 0,
+      "end_char": 497
+    }
+  },
+  {
+    "id": "b17f79ef2769a96a829ffbd59e66146b4b2a94964fc3ac30ace55625a2cd0519",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 7,
+    "text": "Version control has grown up in three stages.\n\n             Local VCS                       Centralized VCS                Distributed VCS  GIT\n\n          💻 Your computer                    🖥 Central server                      ☁ GitHub\n             🗄 versions                       🗄 all versions                      🗄 full copy",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 499,
+      "end_char": 829
+    }
+  },
+  {
+    "id": "fca00c5aa20cdbcb1dc2925d05ba555d48306cd877e2065a84bc3f7a2105ccf8",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 7,
+    "text": "        History lives on one                    ↕   ↕   ↕                         ↕    ↕   ↕\n      machine. If its disk fails,\n          history is gone.                  💻      💻      💻                💻🗄       💻🗄        💻🗄",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 831,
+      "end_char": 1054
+    }
+  },
+  {
+    "id": "6256983f5e7f6536481b070b5176b22c5c42fd9126063547410e14ec88cc6c68",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 7,
+    "text": "                                       Everyone works through one         Every computer has the full\n                                          server. Server down =            history. Work offline; any\n                                           nobody can commit.             copy can restore the others.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 1056,
+      "end_char": 1362
+    }
+  },
+  {
+    "id": "45f90c648e1c634fec325fe497f9d6886386b23a1a785a45b81cd5353ef8ded3",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 7,
+    "text": "1. Local VCS. Versions are kept in a small database on one computer. An early example\nis RCS (1982). Like a personal diary in your room: useful, but only you can read it, and if\nthe house floods it is gone.\n\n2. Centralized VCS. One central server holds all versions. Developers check out files\nfrom it and send changes back. Examples: CVS and Subversion (SVN). Like one library",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 1364,
+      "end_char": 1741
+    }
+  },
+  {
+    "id": "07662a880053bdf0dcaa96b456a9fd6fd6c458be74305a940d344a9cad3c5690",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 8,
+    "text": "book the whole class must share: if the library is closed, nobody can study. The server\nis a single point of failure.\n\n3. Distributed VCS. Every developer has a complete copy of the project and its whole\nhistory on their own computer. Examples: Git and Mercurial. Like every student owning\na full photocopy of the book: if one copy is lost, any other copy can replace it.\n\n                                 Local                    Centralized               Distributed (Git)",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 0,
+      "end_char": 474
+    }
+  },
+  {
+    "id": "62f1dc8f976955528982998d0329fb98ffce3b48e98a1152e8f3a065521a233d",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 8,
+    "text": "  Where history lives            One computer             One server                Every computer\n\n  Work offline?                  Yes                      No                        Yes\n\n  Team work                      No                       Yes                       Yes\n\n  If one machine dies            History lost             Everyone stuck            Nothing lost\n\n   ✨Why Git won",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 476,
+      "end_char": 867
+    }
+  },
+  {
+    "id": "c1dbc8ab4f5e1b847782a4ebcaba25b877d56504d83794c21e1b8e867c54b3d5",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 8,
+    "text": "   Git was created in 2005 by Linus Torvalds, who also created Linux, to manage\n   the Linux kernel's thousands of contributors. It is fast, works offline and makes\n   branching cheap. Today almost every software company uses it.\n\nBenefits of Git and GitHub\n\n    Git   A TOOL                                          GitHub   A WEBSITE\n\n              💻 Installed on your computer                                ☁ github.com",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 869,
+      "end_char": 1292
+    }
+  },
+  {
+    "id": "4dd952363bc4b0425751a5160ac4f8e056804c97eaa02bef474b81e07f58a661",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 8,
+    "text": "      Tracks every change in a folder                       Stores Git repositories online\n      Works offline                                         Needs the internet\n      Free, open source (2005, Linus Torvalds)              Adds teamwork: issues, pull requests,\n      Commands:      init  , add ,  commit  ,               forks\n       log  …                                               Your public developer portfolio",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 1294,
+      "end_char": 1719
+    }
+  },
+  {
+    "id": "6539d439e0f570f25ce381e8213c84eda4056486332ee2a86e929526664e5628",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 8,
+    "text": "              Git works without GitHub. GitHub needs Git. Similar sites: GitLab, Bitbucket.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 1721,
+      "end_char": 1812
+    }
+  },
+  {
+    "id": "0dadda315ceb28854d43254d3fbeb0f85870f940dc6c5dcce1e14fa4822b4553",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 9,
+    "text": "Git is the tool on your computer. GitHub is a website that hosts Git repositories so a\nteam can share them. Together they give you:\n\n   Complete history: every change, with who, when and why.\n\n   Safe experiments: try an idea on a branch without breaking working code (Unit 3).\n\n   Teamwork: many people work on the same project at the same time.\n\n   Undo: go back to any earlier version in seconds (Unit 4).\n\n   Backup: your code is safe on GitHub even if your laptop is not.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 0,
+      "end_char": 476
+    }
+  },
+  {
+    "id": "0e7c8a52f9b53cd8bf3f6cc9736b21c7b8c588c238a08afd961b0deb415c8ea5",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 9,
+    "text": "   Career: your GitHub profile is a portfolio that recruiters look at.\n\n   ⚠Git ≠ GitHub\n\n   A common exam mistake is writing \"GitHub is a version control system\". Git is the\n   version control system. GitHub is a hosting service built around Git. GitLab and\n   Bitbucket are similar services.\n\nInstalling Git on Windows\n\nThe SBCCAS labs use Windows, so here is the Windows installer step by step. (On\nmacOS, Git comes with the Xcode tools; on Ubuntu, run             sudo apt install git        .)",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 478,
+      "end_char": 976
+    }
+  },
+  {
+    "id": "ae229d6c80e6c2ebdfab498e010baca249badba98be66f81ce82e1a2ebcde5a9",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 9,
+    "text": "1. Open git-scm.com and click Download for Windows. Choose the 64-bit installer.\n\n2. Run the installer and click Next on the licence screen.\n\n3. Select Components: keep the defaults.\n\n4. Choosing the default editor: change Vim to Notepad or Visual Studio Code. (Vim\n   confuses beginners. If it ever opens, type        :wq   and press Enter to leave.)\n\n5. Adjusting the name of the initial branch: choose Override the default branch name\n   and type    main  . GitHub uses     main   too.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 978,
+      "end_char": 1466
+    }
+  },
+  {
+    "id": "53ff071d623cdbc355a7a25dbae3090d7a9a4152384432baec2f5038ec2adffa",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 9,
+    "text": "6. Adjusting your PATH: keep Git from the command line and also from 3rd-party\n   software (recommended).\n\n7. SSH executable: keep Use bundled OpenSSH.\n\n8. HTTPS transport backend: keep Use the OpenSSL library. (If the college network\n   blocks GitHub, your lab admin may choose Windows Secure Channel.)",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 1468,
+      "end_char": 1771
+    }
+  },
+  {
+    "id": "31b89623900b325ea80239ea7f539085717a1f6a6fe432649e52866c6f9ccb77",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 10,
+    "text": " 9. Line ending conversions: keep Checkout Windows-style, commit Unix-style line\n    endings.\n\n10. Terminal emulator: keep Use MinTTY.\n\n11. Default behaviour of       git pull    : keep Fast-forward or merge.\n\n12. Credential helper: keep Git Credential Manager. It opens a browser window to sign\n    in to GitHub.\n\n13. Keep the remaining defaults and click Install, then Finish.\n\n Now open Git Bash from the Start menu and check the installation:\n\n           Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 0,
+      "end_char": 467
+    }
+  },
+  {
+    "id": "92b0e3c9bd69f157c3283d2c550a7570c8ba92627c9a04fa39fa41fb8f3d7b1b",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 10,
+    "text": "   $ git --version\n   git version 2.47.1.windows.1\n\n Your number may be newer. Any version 2.x is fine.\n\n    💡No laptop? No problem.\n\n    Everything in Units 1–4 can also be practised in this site's Playground, which runs\n    real Git inside your browser, even on a phone.\n\n Telling Git who you are:            git config\n\n Every commit records an author name and email. Before your first commit, tell Git who\n you are. You only need to do this once per computer:\n\n           Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 469,
+      "end_char": 953
+    }
+  },
+  {
+    "id": "6865efce2ad81c6f8252da0b06cb0cc3741ebd4ff63a11460387d70a5553b66e",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 10,
+    "text": "   $ git config --global user.name \"Krish Patel\"\n   $ git config --global user.email \"krish@example.com\"\n\n Check your settings:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 955,
+      "end_char": 1082
+    }
+  },
+  {
+    "id": "08690e8f60e96e9f7de6950e6af048ba70d4825afe60241fcec86e6d7fe94c98",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 11,
+    "text": "           Git Bash\n\n  $ git config --list\n  init.defaultbranch=main\n  user.name=Krish Patel\n  user.email=krish@example.com\n  $ git config user.name\n  Krish Patel\n\n  Option                          Where the setting is saved           Applies to\n\n   --global                        ~/.gitconfig     in your home       every repository for your user\n                                  folder                               account",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 0,
+      "end_char": 427
+    }
+  },
+  {
+    "id": "e2ae7b29036de69b7c6a30592e40e90ec1308c2e8c774f6b3af751c119585b94",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 11,
+    "text": "  (no option, inside a             .git/config                         only this repository\n  repository)\n\n   ⚠Use the same email as GitHub\n\n   Use the email address you will use for your GitHub account. GitHub uses it to link\n   your commits to your profile and to show the green squares on your contribution\n   graph.\n\n   📝Shared lab computers",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 429,
+      "end_char": 774
+    }
+  },
+  {
+    "id": "c5a36d11a85ea0dbd7d00d182e83514810f7f9afd1b17d8c8ffb716f83f1457d",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 11,
+    "text": "   On a shared lab PC, set your name without              --global     inside your own project\n   folder, so the next student's commits are not labelled with your name.\n\nIf you forget to configure Git, your first commit stops with this message. Now you know\nhow to fix it:\n\n  Author identity unknown\n\n  *** Please tell me who you are.\n\n  Run",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 776,
+      "end_char": 1117
+    }
+  },
+  {
+    "id": "f7a33344e0872192276b87930f174f84ad6478ef8bcd462f30d7b76855e3ca15",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 12,
+    "text": "    git config *-global user.email \"you@example.com\"\n    git config *-global user.name \"Your Name\"\n\nGetting help:        git help\n\nGit has its own manual built in. There are three ways to ask it for help:\n\n  Command                      What you get\n\n   git help                    the list of the most common Git commands\n\n   git help <command>          the full manual page for one command, e.g.       git help commit",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 0,
+      "end_char": 419
+    }
+  },
+  {
+    "id": "9a132e1eb0017661ec8eb0f5ada9736665dc1edecb0ba45099f8613212342477",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 12,
+    "text": "   git <command> -h            a short summary of options, right in the terminal\n\n          Git Bash\n\n  $ git commit -h\n  usage: git commit [-a] [-m <msg-] [--amend] [--allow-empty]\n\n      -m <msg>     use the given message\n      -a, --all    stage modified and deleted tracked files first\n      --amend      replace the last commit\n\n   💡Read the error messages",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 421,
+      "end_char": 782
+    }
+  },
+  {
+    "id": "0b61bae49ed7225f26ce9e86f5a8bf03d5d85ace33fb5609d6dfbc3a05280a56",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 12,
+    "text": "   Git's messages are unusually helpful. They often tell you the exact command to\n   run next. Before searching the internet, read what Git printed.\n\nCreating your GitHub account\n\n1. Go to github.com and click Sign up.\n\n2. Enter your email, the same one you used in            git config     .\n\n3. Create a strong password.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 784,
+      "end_char": 1107
+    }
+  },
+  {
+    "id": "2fa505708af3e5f33dc0f1a68a580b069cee2d38bc73d69837588e13c57aec83",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 12,
+    "text": "4. Choose a professional username:            krish-patel      or  krishpatel-dev       , not\n    coolboy007     . It becomes your portfolio address:        github.com/krish-patel          .\n\n5. Solve the puzzle, then type the code GitHub emails you.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 1109,
+      "end_char": 1359
+    }
+  },
+  {
+    "id": "2038fe8732de82fefe6f5145421b80a1b32aa159070095da50c3a6d0b97edc08",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 13,
+    "text": "6. Choose the Free plan.\n\n7. Turn on two-factor authentication (2FA): Settings → Password and authentication\n   → Enable two-factor authentication. Use an authenticator app or the GitHub Mobile\n   app, and save your recovery codes somewhere safe. GitHub requires 2FA for\n   everyone who contributes code.\n\n8. Add a profile photo, your name, and \"BCA student at SBCCAS, Surat\" in your bio.\n\n   🧪Lab L-01: your profile README",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 0,
+      "end_char": 423
+    }
+  },
+  {
+    "id": "cea5ec33cd2ec336def24ed8d5ccc5011a57f069ce309f5491e3b93c21774442",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 13,
+    "text": "   Create a repository named exactly the same as your username (for example\n    krish-patel/krish-patel         ) and tick Add a README file. Whatever you write in\n   that README appears on your GitHub profile page, like a business card. The full\n   steps are on the Labs page.\n\nUnit 1 summary\n\n   A version control system records every change: what, who, when and why.\n\n   Local VCS keeps history on one machine; centralized VCS on one server;\n   distributed VCS (Git) on every computer.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 425,
+      "end_char": 913
+    }
+  },
+  {
+    "id": "22ce861f6b352141336770b241453bb25944d7c0dbede384d449432d6a6ea80e",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 13,
+    "text": "   Git is the tool on your computer; GitHub is the website that hosts repositories for\n   teams.\n\n   On Windows, install Git for Windows, and set the default branch to             main   and the\n   editor to Notepad or VS Code.\n\n    git config --global user.name            and   user.email     tell Git who you are.\n\n    git help    , git help <command>         and  git <command> -h        are your built-in\n   manual.\n\n   Create a GitHub account with a professional username and turn on 2FA.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 915,
+      "end_char": 1409
+    }
+  },
+  {
+    "id": "465cb7e6e28fba34930a85409057a8eb81038618c5940f3d363fc63deadec2f9",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 13,
+    "text": "Next, practise with Missions M-01 and M-02 below, then take the Unit 1 quiz.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_1",
+      "section_title": "Introduction to Version Control",
+      "start_char": 1411,
+      "end_char": 1487
+    }
+  },
+  {
+    "id": "38ad073c33ef80397ac93555d6b11c0be497275bd050c89faa6dac329adece84",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 14,
+    "text": "    CHAPTER 2 · UNIT 2 · 8 HOURS\n    Getting Started with Git\n\n    Local and remote repositories, the three stages, and the everyday commands — from your first\n    commit to your first push.\n\n      Local vs remote repositories    init · status · add · commit  push · clone    pull · fetch\n\n      Your first repository\n\n    Practise online: missions M-03, M-04, M-05, M-06, M-07\n\nYour terminal survival kit",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 405
+    }
+  },
+  {
+    "id": "ca298dd862f69305c3bf17547ba798f646d9d4e8843eea0d4ce20fbfbaf7c832",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 14,
+    "text": "Git is used from a terminal: on Windows that is Git Bash, on a Mac the Terminal app.\nYou only need a handful of commands to move around:\n\n  Command               Does                                               Example\n\n   pwd                  print working directory: where am I?                pwd   →  /home/student\n\n   ls                   list files (ls -a   also shows hidden               ls -a\n                        ones like   .git  )",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 407,
+      "end_char": 854
+    }
+  },
+  {
+    "id": "90ce0c58eab87c01c47a6fe2a6271e00c8efd371269271eabe49a5bbbac2d47a",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 14,
+    "text": "   cd                   change directory (    cd ..    = up one             cd amroli-canteen\n                        level,  cd ~   = home)\n\n   mkdir                make a directory (folder)                           mkdir amroli-canteen\n\n   touch                create an empty file                                touch notes.txt",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 856,
+      "end_char": 1187
+    }
+  },
+  {
+    "id": "9fc012cf8ce124d900a6a4caf02c47259bc1f448ab2c08902067693e1572c643",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 14,
+    "text": "   echo \"…\" >           write text into a file (>>   adds to the            echo \"Samosa 15\" >\n  file                  end)                                               menu.txt\n\n   cat                  show a file                                         cat menu.txt",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 1189,
+      "end_char": 1457
+    }
+  },
+  {
+    "id": "52c1ff6f656b193accc08eefdbbddfdf0be3ba4f8d1238e0b8aad19c85fc1296",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 15,
+    "text": "           Git Bash\n\n  $ pwd\n  /home/student\n  $ mkdir amroli-canteen\n  $ cd amroli-canteen\n\n   💡The number one beginner mistake\n\n   Running Git in the wrong folder. If Git says          fatal: not a git repository             , run\n    pwd    and   cd   into your project. The prompt shows your folder:             ~/amroli-\n   canteen (main)       .\n\nLocal and remote repositories\n\nA repository (or repo) is a project folder that Git tracks: your files plus their complete\nhistory.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 483
+    }
+  },
+  {
+    "id": "18fa689fe96b9c68d0adf67d2a0bd1440f1fafd22a46f044b82d7ddee828fcc2",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 15,
+    "text": "    💻 Krish's                                        ☁ GitHub                             💻 Dhruvi's\n    laptop                 git push                                      git clone        laptop\n    local                                      remote repository ·                        local\n                      git pull / fetch         “origin”                   git push\n    repository                                                                            repository",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 485,
+      "end_char": 962
+    }
+  },
+  {
+    "id": "e42116836fb4db33ca3337a2593428e05be7c3fcd6e099fcc78f5fbb3dba8884",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 16,
+    "text": "                          Local repository                       Remote repository\n\n  Lives on                your computer (the     .git            a server such as GitHub\n                          folder)\n\n  Needs internet?         No                                     Yes, to sync\n\n  Who can see it?         only you                               your team, or the whole world if\n                                                                 public",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 456
+    }
+  },
+  {
+    "id": "27e6c62971a3cd103b762bc5a5266be6e4a17a58ddbc71f6bfb2f8bf3c3a2a7b",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 16,
+    "text": "  If your laptop dies     gone                                   safe\n\n  You send work           n/a                                     git push\n  with\n\n  You get work with       n/a                                     git clone   ,  git fetch   ,  git\n                                                                 pull\n\n   🧠Your notebook and the class notice board",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 458,
+      "end_char": 827
+    }
+  },
+  {
+    "id": "7880b58409339bf6eefc85287a21eda046160bbea7bd02e42a773bd82cfc6cd6",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 16,
+    "text": "   Your local repo is your own notebook: you can write in it anywhere, even with no\n   network. The remote repo is the class notice board: everyone reads from it, and\n   you pin (push) your work there when it is ready.\n\nBy convention the main remote is called           origin   .\n\nCreating a repository:             git init\n\n           Git Bash\n\n  $ cd ~/amroli-canteen\n  $ git init\n  Initialized empty Git repository in /home/student/amroli-canteen/.git/\n  $ ls -a\n  ./  -./  .git/",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 829,
+      "end_char": 1313
+    }
+  },
+  {
+    "id": "428e55b81673275e4d0c8c2057cfb8d2d318f104b22062cde6e410df146cbfb6",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 16,
+    "text": " git init     creates one hidden folder,       .git   . That folder is the repository: all history,\nbranches and settings live inside it. Delete         .git   and the folder becomes an ordinary\nfolder again.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 1315,
+      "end_char": 1523
+    }
+  },
+  {
+    "id": "8a29c4197e13af365beb1eee253c793517eb4eca37d121210d3a2167711be2b8",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 17,
+    "text": "  amroli-canteen/\n  ├── menu.txt              ← your files (working directory)\n  └── .git/                 ← the repository — Git manages this, don't edit it\n       ├── HEAD              ← which branch you are on\n       ├── config            ← settings for this repository\n       ├── objects/          ← every saved version of every file\n       ├── refs/             ← branch and tag names\n       ├── hooks/            ← optional scripts\n       └── info/\n\n   ⚠Never edit .git by hand",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 483
+    }
+  },
+  {
+    "id": "e5e5a8da477caa0c612af894f64c0a13819c9ee987cd3c0f7b2ebf3ddd3c25b1",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 17,
+    "text": "   Look inside if you are curious (       ls .git    ), but let Git manage it. Also, never run\n    git init      in your home folder or on your Desktop: only inside a project folder.\n\nThe three stages\n\nThis is the most important idea in Git. Every change passes through three places:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 485,
+      "end_char": 768
+    }
+  },
+  {
+    "id": "14fad4b011f2c3c5e5e021599b1dbacd42d78c29301e37aa67cd3430d0bb6fe3",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 17,
+    "text": "                                                     Staging area                           Repository\n Working directory                                                                       The  .git  folder\n Your folder — you            git add               The “index” —                            — saved\n   edit files here                                 what goes in the     git commit          snapshots\n                                                     next commit\n   menu.txt ✎         ",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 770,
+      "end_char": 1270
+    }
+  },
+  {
+    "id": "756660bd30268d8689c6981ca8a44eadb75f3f1b523c4b69a48fb681032445b7",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 17,
+    "text": "                               menu.txt ✓                              6cb774b\n                                                                                           “Add menu”\n\n   📮 Desk → envelope → posted letter. You write on the desk, choose what goes in the envelope,\n                                               then post it.\n\n1. Working directory: the files you see and edit.\n\n2. Staging area (also called the index): the changes you have chosen for the next\n   snapshot.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 1270,
+      "end_char": 1754
+    }
+  },
+  {
+    "id": "b7b6eeda2e1f9415238222005fa63eade94e8fa8118824d048953c21d1066124",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 17,
+    "text": "3. Repository: the snapshots (commits) saved permanently in                   .git  .",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 1756,
+      "end_char": 1841
+    }
+  },
+  {
+    "id": "ee5b177e073bf47fe48475616146baa3c69c2c256870cb2e94897330314e43f1",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 18,
+    "text": "   🧠The post office\n\n   You write letters at your desk (working directory). You put the ones that are ready\n   into an envelope (staging area); you don't have to send every letter you wrote.\n   When you post the envelope (commit), it is sent and recorded.\n\nWhy have a staging area at all? Because real work is messy. You may fix a bug and\nstart a new feature in the same hour. Staging lets you commit them as two clean,\nseparate commits.\n\nChecking where things are:                 git status",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 492
+    }
+  },
+  {
+    "id": "1421f83c2d28b1ee859ad4d275990cb67d1b83b87b0d95e1942684f6d9f20e59",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 18,
+    "text": " git status      is the command you will type most often. Run it before and after\neverything.\n\n          Git Bash\n\n  $ echo \"Samosa 15\" > menu.txt\n  $ git status\n  On branch main\n\n  No commits yet\n\n  Untracked files:\n    (use \"git add <file>--.\" to include in what will be committed)\n            menu.txt\n\n  nothing added to commit but untracked files present (use \"git add\" to track)\n\nUntracked means Git sees the file but has never saved it. Notice that Git even tells you\nwhat to do next.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 494,
+      "end_char": 985
+    }
+  },
+  {
+    "id": "700f6acc95d4618371b19f59610404221cc039413faed853fb99d02cb653999e",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 19,
+    "text": "  What status says                          Meaning                                     Colour in Git\n                                                                                        Bash\n\n  Untracked files                           new file Git has never saved                red\n\n  Changes not staged for commit             a saved file was edited, but not            red\n                                            staged",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 431
+    }
+  },
+  {
+    "id": "e635db1f47845d0b69e8007e699e1c4c1c1b8afc299e19b3488b87143f606cfb",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 19,
+    "text": "  Changes to be committed                   staged, ready for the next commit           green\n\n  nothing to commit, working tree           everything is saved                         n/a\n  clean\n\nThere is also a short format:       git status -s        prints  ??   for untracked,     M   for\nmodified (left column = staged, right column = not staged).\n\nStaging changes:            git add\n\n           Git Bash\n\n  $ git add menu.txt\n  $ git status\n  On branch main\n\n  No commits yet",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 433,
+      "end_char": 915
+    }
+  },
+  {
+    "id": "d5ffe752b9947c2203165dc899f6213180f46ec689bff0e330fdcff67344bf6c",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 19,
+    "text": "  Changes to be committed:\n    (use \"git rm --cached <file>--.\" to unstage)\n             new file:   menu.txt\n\nWays to stage:\n\n  Command                                     Stages\n\n   git add menu.txt                           one file\n\n   git add menu.txt cart.js                   several files\n\n   git add *.css                              every   .css   file in this folder\n\n   git add .                                  everything changed in this folder and below",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 917,
+      "end_char": 1386
+    }
+  },
+  {
+    "id": "932c142379d503a7a5915ab3fadac33ddd5ed658390460b223b5085fbc27349f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 20,
+    "text": "Staged something by mistake? Unstage it, and your edit stays safe in the file:\n\n          Git Bash\n\n  $ git add .\n  $ git restore --staged menu.css\n  $ git status -s\n  M  menu.txt\n  -? menu.css\n\nSaving a snapshot:            git commit\n\n          Git Bash\n\n  $ git commit -m \"Add menu\"\n  [main (root-commit) 6cb774b] Add menu\n   1 file changed, 1 insertion(+)\n   create mode 100644 menu.txt",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 390
+    }
+  },
+  {
+    "id": "9aa8cceaef82b6f110fe400070ea9dfada002fcb87d56d0b340bdb493cd7f7e9",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 20,
+    "text": "Read that output: on branch main, the very first (root) commit, its short ID 6cb774b,\nyour message, and what changed. Every commit gets a unique 40-character ID (a\nSHA-1 hash). Git usually shows the first seven characters.\n\n          Git Bash\n\n  $ git log\n  commit 6cb774b24074eb78d807a9a2420e109ab07b3a89 (HEAD -> main)\n  Author: Krish Patel <krish@example.com>\n  Date:   Thu Oct 22 22:55:39 2026 +0530\n\n      Add menu",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 392,
+      "end_char": 811
+    }
+  },
+  {
+    "id": "e4b8f0323f7993bf55503fc1aac099866206a157c5ff88886f7d725e8bd5254f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 20,
+    "text": "Krish edits the menu and adds a stylesheet. He commits them separately, because\nthey are two different changes:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 813,
+      "end_char": 924
+    }
+  },
+  {
+    "id": "f9356924d2d74bab057f61b5f622590bbc30144fd24b6a6a5030355129f93512",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 21,
+    "text": "          Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 18
+    }
+  },
+  {
+    "id": "b014f8c1873b156c91c3feaf0e9342d51213286ce9fbfa49b736efbd561cc8a6",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 21,
+    "text": "  $ echo \"Vada Pav 20\" -> menu.txt\n  $ git diff\n  diff --git a/menu.txt b/menu.txt\n  index 4b00757-.b0be448 100644\n  --- a/menu.txt\n  --+ b/menu.txt\n  @@ -1 +1,2 @@\n   Samosa 15\n  +Vada Pav 20\n  $ git add menu.txt\n  $ git commit -m \"Add vada pav to menu\"\n  [main b0d4373] Add vada pav to menu\n   1 file changed, 1 insertion(+)\n  $ git add menu.css\n  $ git commit -m \"Add menu styles\"\n  [main 92bd5b5] Add menu styles\n   1 file changed, 1 insertion(+)\n   create mode 100644 menu.css\n  $ git log --onel",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 20,
+      "end_char": 520
+    }
+  },
+  {
+    "id": "e121278898ffad8072695362622fc3e3c25b4e02e6ccd02c064462278c8ae726",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 21,
+    "text": "ine\n  92bd5b5 (HEAD -> main) Add menu styles\n  b0d4373 Add vada pav to menu\n  6cb774b Add menu\n\n   💡Good commit messages\n\n   Write what the commit does, starting with a verb: \"Add vada pav to menu\", \"Fix\n   total when cart is empty\". Not \"update\", \"changes\" or \"final\". Your future self,\n   and your teammates, read these messages to understand the history.\n\n   📝Shortcut:        git commit -am \"message\"",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 520,
+      "end_char": 924
+    }
+  },
+  {
+    "id": "6675f0475cc9b2f306fe4bafa213cab256c23099c0e38395078ec1397a4754df",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 21,
+    "text": "    -a   stages every modified tracked file before committing. It does not add new\n   (untracked) files; those still need     git add    .\n\nYour first repository on GitHub\n\nThere are two ways to connect a project to GitHub. Both end in the same place.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 926,
+      "end_char": 1177
+    }
+  },
+  {
+    "id": "829b82c1ca4ffa8afa8ab3b263f34c1f7a009c4787a1ed32dbb9efc862661bed",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 22,
+    "text": "                            Method 1: local first                              Method 2: GitHub\n                                                                               first\n\n  Start with                a folder on your computer (   git init   )         a new repo on\n                                                                               github.com\n\n  On GitHub, create         empty: don't add a README                          with a README\n  the repo…",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 470
+    }
+  },
+  {
+    "id": "d59deb24f993314de427574ceac9e456fc36566cbefd959a6a97692c7f356f65",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 22,
+    "text": "  Then run                   git remote add origin <url>        and  git        git clone <url>\n                            push -u origin main\n\n  Best when                 you already have code                              you are starting\n                                                                               fresh\n\nTo create a repo on GitHub: click + (top right) → New repository → type a name →\nchoose Public or Private → Create repository. GitHub then shows the exact commands\nto run.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 472,
+      "end_char": 970
+    }
+  },
+  {
+    "id": "1478aa67fa99176246ace5e250177c990da963a135205f27bd6521e8d6ac14cf",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 22,
+    "text": "   ⚠\"refusing to merge unrelated histories\"\n\n   This error appears if you create the GitHub repo with a README and also run                 git\n   init   locally, so the two have different first commits. Pick one method. (The fix is\n    git pull origin main --allow-unrelated-histories                   .)\n\nUploading:        git remote        and    git push\n\nKrish uses Method 1. He created an empty repo on GitHub, so he connects his local\nrepo to it and pushes:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 972,
+      "end_char": 1437
+    }
+  },
+  {
+    "id": "ba6127b2829d9e12864e6b298a5e95c21e836b68b918810ab27ec39fb525ca62",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 23,
+    "text": "          Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 18
+    }
+  },
+  {
+    "id": "03f60aeea5299e598eea1727ff0572c4cf124a6625d4d833dbf55d5f0e4252a5",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 23,
+    "text": "  $ git remote add origin https:-/github.com/krish-patel/amroli-canteen.git\n  $ git remote -v\n  origin    https:-/github.com/krish-patel/amroli-canteen.git (fetch)\n  origin    https:-/github.com/krish-patel/amroli-canteen.git (push)\n  $ git push -u origin main\n  Enumerating objects: 9, done.\n  Counting objects: 100% (9/9), done.\n  Writing objects: 100% (9/9), done.\n  Total 9 (delta 0), reused 0 (delta 0), pack-reused 0\n  To https:-/github.com/krish-patel/amroli-canteen.git\n   * [new branch]     ",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 20,
+      "end_char": 520
+    }
+  },
+  {
+    "id": "b69cd1c385bf9112b5adbb08192ddc73dd4a24ce6a071990aa693e1371aa6331",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 23,
+    "text": " main -> main\n  branch 'main' set up to track 'origin/main'.\n\n    origin     is the nickname for the GitHub URL.\n\n    -u   (set upstream) links your      main    to  origin/main     . From now on, plain      git\n   push    and   git pull     know where to go.\n\n   📝Signing in",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 520,
+      "end_char": 795
+    }
+  },
+  {
+    "id": "611fd13b427a6c77f0e2fab2921ec5f046ca9183f08564125a8e9bf70b336079",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 23,
+    "text": "   On a real computer the first push opens a browser window from Git Credential\n   Manager to sign in to GitHub. GitHub no longer accepts your account password\n   typed in the terminal. In this site's Playground the GitHub is simulated, so no sign-\n   in is needed.\n\nDownloading a project:               git clone\n\nHetvi created a repo for project notes. Dhruvi wants a copy on her laptop:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 797,
+      "end_char": 1186
+    }
+  },
+  {
+    "id": "8e19babaf27c3a5aeb86c066ceae13b4317dd60aec8ffe4dfd34d0ac58c72012",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 24,
+    "text": "           Git Bash\n\n  $ git clone https:-/github.com/hetvi-desai/canteen-docs.git\n  Cloning into 'canteen-docs'--.\n  remote: Enumerating objects: 3, done.\n  remote: Counting objects: 100% (3/3), done.\n  remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0\n  Receiving objects: 100% (3/3), done.\n  $ cd canteen-docs\n  $ git remote -v\n  origin    https:-/github.com/hetvi-desai/canteen-docs.git (fetch)\n  origin    https:-/github.com/hetvi-desai/canteen-docs.git (push)",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 476
+    }
+  },
+  {
+    "id": "98d277166c9ff26bee4b15c03b7dc7132e1ff1d57ef2429c2115f097a3be8819",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 24,
+    "text": " git clone      downloads every file and the whole history, and sets up               origin     for you.\nThat's why you don't run        git init     or  git remote add        after cloning.\n\n   ⚠Clone ≠ Download ZIP\n\n   GitHub's Download ZIP button gives you only the files: no history and no\n   connection to GitHub. You can't push or pull from it.\n\nGetting your team's work:                git fetch        and    git pull",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 478,
+      "end_char": 904
+    }
+  },
+  {
+    "id": "47f4170f81abd285ff5974ca6b5f066c5d97c1f33bca45d88ace0e1f5b9f3f8c",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 24,
+    "text": "Overnight, Dhruvi pushed a new file,          orders.py     . Next morning Krish gets her work.\n\n     git fetch                                           git pull\n\n    📦 The parcel arrives at your door.                  📦➡🏠 The parcel is opened and unpacked.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 906,
+      "end_char": 1164
+    }
+  },
+  {
+    "id": "4c524a409d33a2d6c9ac620bd8874afb7688b4d83856a6730b6388b6e301be57",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 24,
+    "text": "      Downloads new commits into                           =  git fetch    + git merge\n       origin/main                                         Your branch moves forward\n      Your branch and files do not change                  Your files update\n      Look first: git log main..origin/main\n\nLook before you leap with         git fetch    :",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 1166,
+      "end_char": 1508
+    }
+  },
+  {
+    "id": "563e85fa3c6b8bef9249f27e69296dfc1740321fe18e1420d2ac672b5d5a5e80",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 25,
+    "text": "          Git Bash\n\n  $ git fetch\n  remote: Enumerating objects: 3, done.\n  remote: Counting objects: 100% (3/3), done.\n  remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0\n  Unpacking objects: 100% (3/3), done.\n  From https:-/github.com/krish-patel/amroli-canteen\n     92bd5b5-.e423aad  main -> origin/main\n  $ git status\n  On branch main\n  Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.\n    (use \"git pull\" to update your local branch)",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 476
+    }
+  },
+  {
+    "id": "ace5a548586da02c1c15ca1ad230408610372302250c73d0d62dfec85710b840",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 25,
+    "text": "  nothing to commit, working tree clean\n  $ git log --oneline main-.origin/main\n  e423aad (origin/main) Add orders list\n\nThen bring it in with    git pull     (fetch + merge):\n\n          Git Bash\n\n  $ git pull\n  Updating 92bd5b5-.e423aad\n  Fast-forward\n   orders.py | 1 +\n   1 file changed, 1 insertion(+)\n   create mode 100644 orders.py\n\n   ⚠\"rejected … (fetch first)\"",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 478,
+      "end_char": 847
+    }
+  },
+  {
+    "id": "b19d91bdbd3f60e9584e39bca6556677c099e8ba23c557566dcd600cc1cb4031",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 25,
+    "text": "   If a teammate pushed before you, Git refuses your push. Never panic and never\n   force it: run  git pull    , then   git push     again.\n\nThe daily loop\n\n  ☀   git pull    →      ✏ edit files →      🔍    git status    →      📦   git add    →\n\n  💾   git commit -m     →      ☁   git push",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 849,
+      "end_char": 1138
+    }
+  },
+  {
+    "id": "6e0614a3bd854d0d2782e450ccf216a411c94d61f3de70919bea71eac7880b67",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 26,
+    "text": "   A repository is a folder plus its history in      .git   . git init     creates one.\n\n   Changes move working directory → staging area → repository with                   git add     and\n    git commit     .\n\n    git status      tells you where every file is. Read it often.\n\n   Local first:   git remote add origin <url>            then   git push -u origin main          .\n   GitHub first:    git clone <url>       .",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 0,
+      "end_char": 421
+    }
+  },
+  {
+    "id": "e183eb3a2f2b4aa4a007318ae7fc5e5084892e85931f484b174e88daf57e19b6",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 26,
+    "text": "    git fetch      downloads without changing your files;          git pull     downloads and\n   merges.\n\n   Commit small, commit often, and write messages that start with a verb.\n\nPractise with Missions M-03 to M-07, then take the Unit 2 quiz.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_2",
+      "section_title": "Getting Started with Git",
+      "start_char": 423,
+      "end_char": 667
+    }
+  },
+  {
+    "id": "c605a6b58748e316e19dfe3c46c64518492c091bdd6750443c74c20ea1204acf",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 27,
+    "text": "    CHAPTER 3 · UNIT 3 · 6 HOURS\n    Branching and Merging\n\n    Work in parallel with branches, bring work together with merges, and calmly resolve conflicts.\n\n      Introduction to branches    Creating & switching branches    Merging & resolving conflicts\n\n      Deleting branches\n\n    Practise online: missions M-08, M-09, M-10, M-11\n\nWhy branches?",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 0,
+      "end_char": 350
+    }
+  },
+  {
+    "id": "68c3a76c9c5431696a62f026f1fdbf8e1f0c7ba9707f2bd692fe1d4a972b6e15",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 27,
+    "text": "The Amroli Canteen app works, and Hetvi has shown it to the canteen manager. Now\nKrish wants to try a new menu design, and Dhruvi wants to add online payment. Both\nchanges will take days, and both might break things.\n\nIf they edit  main    directly, the working app is broken until they finish. If they don't, they\ncan't save their progress. Branches solve this.\n\n   🧠Parallel universes",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 352,
+      "end_char": 738
+    }
+  },
+  {
+    "id": "56214299d3f690eb94631c07b98ed5058012e20f33c5abc26bef3a7d36d728d5",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 27,
+    "text": "   A branch is a parallel universe for your project. Krish can try his new design in his\n   own universe. If it works, he brings it back to the main universe (a merge). If it\n   fails, he deletes that universe, and       main    never even knew.\n\nWith branches:\n\n    main    always stays working, ready to demo.\n\n   Each feature gets its own branch:          feature-menu      ,  feature-payment       .\n\n   Several people work in parallel without disturbing each other.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 740,
+      "end_char": 1210
+    }
+  },
+  {
+    "id": "5fd5bb7d63173f3773142deb799dc38682ab4ba4b5659982a50597c089bb3f26",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 27,
+    "text": "   Finished work is merged back into           main   .",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 1212,
+      "end_char": 1267
+    }
+  },
+  {
+    "id": "4937e699343e1b3a9bbf9070f6e6811eac6f075b582e37f96dadad3df5af59f7",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 28,
+    "text": "What a branch really is\n\n                                                                         HEAD\n\n                                                                        feature-menu\n\n                                                                D\n\n                                                         main\n\n                  A              B               C",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 0,
+      "end_char": 370
+    }
+  },
+  {
+    "id": "aa2ab7a9769266c324a544b7b7f91fdac6dfe709feac0fe03fab33e9736fe969",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 28,
+    "text": "  A branch is just a movable label on a commit. HEAD shows which branch you are on. Committing\n                                       moves that label forward.\n\nA branch is not a copy of your files. It is a tiny label that points to one commit, which is\nwhy creating a branch is instant.\n\n   When you commit, the current branch's label moves forward to the new commit.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 372,
+      "end_char": 740
+    }
+  },
+  {
+    "id": "2b165aa121d14edb278900c24737a8009b0a74fddbe084763823092421e11366",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 28,
+    "text": "   HEAD is a special label that says which branch you are on. Git Bash shows it in the\n   prompt:    ~/amroli-canteen (feature-menu)              .\n\nCreating and listing branches\n\n           Git Bash\n\n  $ git branch\n  * main\n  $ git branch feature-menu\n  $ git branch\n    feature-menu\n  * main\n\n    git branch       lists branches. The     *   marks the one you are on.\n\n    git branch <name>         creates a branch at your current commit, but it does not\n   switch to it.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 742,
+      "end_char": 1216
+    }
+  },
+  {
+    "id": "c6f195e4c2eb41d65aad13daa267719efcc88d7665a3b9bcaf94a18e29d0e65f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 29,
+    "text": "   💡Naming branches\n\n   Use short, descriptive, lowercase names with hyphens:               feature-menu     ,  fix-\n   cart-total     , docs-readme      . No spaces.\n\nSwitching branches\n\n          Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 0,
+      "end_char": 206
+    }
+  },
+  {
+    "id": "918ae56b59411ed4bbcf107d5bb199ec0520e1ee301ea8c3030075cd4485f3ca",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 29,
+    "text": "  $ git switch feature-menu\n  Switched to branch 'feature-menu'\n  $ echo \"Vada Pav 20\" -> menu.txt\n  $ git commit -am \"Add vada pav to menu\"\n  [feature-menu b97cb83] Add vada pav to menu\n   1 file changed, 1 insertion(+)\n  $ git log --oneline --graph --all\n  * b97cb83 (HEAD -> feature-menu) Add vada pav to menu\n  * 8391a89 (main) Add opening time\n  * 3c16dcc Add menu\n\nNow switch back to       main    and look at the menu:\n\n          Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 208,
+      "end_char": 653
+    }
+  },
+  {
+    "id": "d8e942fa9e517418936be7973a8a47b894d33e04df510efac7a9a957bca0e3a3",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 29,
+    "text": "  $ git switch main\n  Switched to branch 'main'\n  $ cat menu.txt\n  Samosa 15\n\nThe Vada Pav line is gone. That's not lost work: it is safely on          feature-menu      .\nSwitching branches changes the files in your folder to match that branch.\n\nCreate and switch in one step:\n\n  New way (Git 2.23+)            Classic way                       Does\n\n   git switch <branch>            git checkout <branch>            move to an existing branch",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 655,
+      "end_char": 1100
+    }
+  },
+  {
+    "id": "56caac44dd139ee17aaa5ba2acda93125a2d3d91c5e3f6a73a4842f7f70a2469",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 29,
+    "text": "   git switch -c <new>            git checkout -b <new>            create a branch and move to it",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 1102,
+      "end_char": 1199
+    }
+  },
+  {
+    "id": "e15d0065431b08f19717b2467c69669cb75f165b2b2e46f780064273b13a7a11",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 30,
+    "text": "Both work.    checkout      is older and does many jobs (it also restores files), so newer Git\nadded the clearer      switch   . You will see    checkout     in many tutorials, so know both.\n\n   ⚠Commit before you switch\n\n   If you have uncommitted changes to a file that is different on the other branch,\n   Git refuses to switch: \"Your local changes to the following files would be\n   overwritten by checkout\". Commit your work (or stash it, Unit 4) first.\n\nMerging: fast-forward",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 0,
+      "end_char": 481
+    }
+  },
+  {
+    "id": "1f80d8a2fba643bbc8cdfbfd027d557eb3ab7847017d5579c0bd8f9c34646d5f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 30,
+    "text": "Krish is happy with the new menu. To bring           feature-menu       into  main   , switch to the\nbranch that receives the changes, then merge:\n\n          Git Bash\n\n  $ git switch main\n  $ git merge feature-menu\n  Updating 8391a89-.b97cb83\n  Fast-forward\n   menu.txt | 1 +\n   1 file changed, 1 insertion(+)\n\nFast-forward means        main    had no new commits of its own, so Git simply moved the\n main   label forward to Krish's commit. No new commit was needed.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 483,
+      "end_char": 949
+    }
+  },
+  {
+    "id": "54c842f61562559de8c0938937538e2d445e6f17b35cfd3785ac65d7c99ea873",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 31,
+    "text": "Three-way merges\n\n    Fast-forward                                         Three-way merge\n\n                                         main →\n\n                                                                                              merge\n\n    main had no new commits, so Git just moves           Both branches moved on, so Git joins them\n    the label forward. No merge commit.                  with a new merge commit that has two\n                                                         parents.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 0,
+      "end_char": 500
+    }
+  },
+  {
+    "id": "c92ab0f6343d37ce2c905e59ed6ea5d4b3c5ee0ccc95cfb0704e37c31bf4b241",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 31,
+    "text": "Meanwhile Krish built the cart on         feature-cart       , and someone also added tea to\n main   . Now both branches have new commits:\n\n           Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 502,
+      "end_char": 661
+    }
+  },
+  {
+    "id": "00229e848e5ba6a379577e14aafdcf384ba298398bd027ca15b79d230c7a1ce4",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 31,
+    "text": "  $ git merge feature-cart\n  Merge made by the 'ort' strategy.\n   cart.js | 1 +\n   1 file changed, 1 insertion(+)\n   create mode 100644 cart.js\n  $ git log --oneline --graph\n  *   de0d069 (HEAD -> main) Merge branch 'feature-cart'\n  |\\\n  * | 3776e7d Add tea\n  | * 7c7c199 (feature-cart) Add cart\n  * | b97cb83 (feature-menu) Add vada pav to menu\n  |/\n  * 8391a89 Add opening time\n  * 3c16dcc Add menu",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 663,
+      "end_char": 1063
+    }
+  },
+  {
+    "id": "6d53cf473fc7b9585094140048f30e8e071e287ad7e8085d3c181969ff7d5b5e",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 31,
+    "text": "Git found the common ancestor (          8391a89     ), combined both sets of changes, and\ncreated a merge commit with two parents. Read the graph from the top: the                      |\\   is\nwhere the history splits; the       |/   is where it started.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 1065,
+      "end_char": 1320
+    }
+  },
+  {
+    "id": "a70836bbd06cc2e4ae80681166e55d06e9ec0d618691cc4d3c82639797f54f56",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 32,
+    "text": "   📝Opens an editor?\n\n   On a real computer,       git merge      may open your editor with the message Merge\n   branch 'feature-cart'. Just save and close it to accept.\n\nMerge conflicts\n\nSometimes Git cannot decide alone. Dhruvi changed the opening time to 8 AM on her\nbranch; on    main   , Krish changed the same line to 10 AM.\n\n           Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 0,
+      "end_char": 351
+    }
+  },
+  {
+    "id": "d0b584ff6897995bd32c652afb9dd67426d2f330f8e678ba82f00fca09885dfe",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 32,
+    "text": "  $ git merge change-timing\n  Auto-merging timing.txt\n  CONFLICT (content): Merge conflict in timing.txt\n  Automatic merge failed; fix conflicts and then commit the result.\n  $ git status\n  On branch main\n  You have unmerged paths.\n    (fix conflicts and run \"git commit\")\n    (use \"git merge --abort\" to abort the merge)\n\n  Unmerged paths:\n    (use \"git add <file>--.\" to mark resolution)\n            both modified:   timing.txt",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 353,
+      "end_char": 782
+    }
+  },
+  {
+    "id": "0d50045b602899139a16381c555463d310c79c2de3e4023b2e0e4b86e0d4e7ff",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 32,
+    "text": "A conflict happens when two branches change the same lines of the same file. Git\nstops and asks a human to decide. That isn't an error: it is Git refusing to guess.\n\nGit writes both versions into the file, between markers:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 784,
+      "end_char": 1006
+    }
+  },
+  {
+    "id": "ea730c9a35f9415d649c19b4f7405f3e2b6fe3509abf22e8920fa187c4134eba",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 32,
+    "text": "                                                     <<<<<<< HEAD     starts your version (the branch\n    <<<<<<< HEAD                                    you are on)\n    Open: 10 AM                                      =======    divides the two versions\n    =======                                          >>>>>>> change-timing      ends their version (the\n    Open: 8 AM                                      branch being merged)\n    >>>>>>> change-timing                           To resolve: keep",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 1008,
+      "end_char": 1508
+    }
+  },
+  {
+    "id": "c887813c75497dd19cd98f793cefb871b4380b4d39574595c6ca6c2b610cbf56",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 32,
+    "text": " the right text, delete all three\n                                                    marker lines, then  git add    and  git commit",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 1508,
+      "end_char": 1640
+    }
+  },
+  {
+    "id": "4175aadaad91d5f034427f84cff83b1c19bb5bae3e40137e3bbefa6e450fa38a",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 33,
+    "text": "Resolving a conflict, step by step:\n\n1. Open the file (   edit timing.txt        in the Playground, or your editor).\n\n2. Decide the correct content. Keep one side, the other, or a mix.\n\n3. Delete all three marker lines.\n\n4. Mark it resolved:     git add timing.txt        .\n\n5. Finish the merge:      git commit     .\n\n          Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 0,
+      "end_char": 337
+    }
+  },
+  {
+    "id": "d61ee787f54f64c2012717265abb8e9ff69a5d9753eb01bc671167f8a6e2a9ba",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 33,
+    "text": "  $ echo \"Open: 8 AM\" > timing.txt\n  $ git add timing.txt\n  $ git status\n  On branch main\n  All conflicts fixed but you are still merging.\n    (use \"git commit\" to conclude merge)\n\n  Changes to be committed:\n    (use \"git restore --staged <file>--.\" to unstage)\n            modified:   timing.txt\n  $ git commit --no-edit\n  [main e41ab0c] Merge branch 'change-timing'\n\n   💡The escape hatch",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 339,
+      "end_char": 728
+    }
+  },
+  {
+    "id": "7af89d19d2ca4983cbe1a80433a77e7eb48f56d23e6db99c57e91446c9cb9229",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 33,
+    "text": "   Changed your mind halfway?           git merge --abort         puts everything back exactly\n   as it was before the merge.\n\nPractise resolving conflicts\n\nTap lines to delete them until each file matches what the team decided, with no\nmarkers left.\n\nLoading the conflict game…",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 730,
+      "end_char": 1008
+    }
+  },
+  {
+    "id": "c96da4da286e7677a114ac346a9327c1b556483a368e97dd236412b88105d125",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 34,
+    "text": "Deleting branches\n\nAfter a branch is merged, its label is no longer needed. Deleting it keeps              git branch\ntidy (the commits stay in      main  's history):\n\n          Git Bash\n\n  $ git branch -d feature-menu\n  Deleted branch feature-menu (was b97cb83).\n\nGit protects you from deleting work that was never merged:\n\n          Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 0,
+      "end_char": 344
+    }
+  },
+  {
+    "id": "6213a2c67be0d03be7114ce12095cddf4aedd3be634ba6ac0c80a87d529debcf",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 34,
+    "text": "  $ git branch -d experiment\n  error: the branch 'experiment' is not fully merged\n  hint: If you are sure you want to delete it, run 'git branch -D experiment'\n  hint: Disable this message with \"git config set advice.forceDeleteBranch false\"\n  $ git branch -D experiment\n  Deleted branch experiment (was 84079e6).\n\n  Command                                 Deletes\n\n   git branch -d <name>                   a merged branch (safe)",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 346,
+      "end_char": 776
+    }
+  },
+  {
+    "id": "7cafe8082655c8c8efea7641cec68c39fe701faa70cb5595c61ad1dd514aae3f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 34,
+    "text": "   git branch -D <name>                   any branch, even unmerged (its unique commits are\n                                          abandoned)\n\n   git push origin --delete               the branch on GitHub\n  <name>\n\nYou can't delete the branch you are standing on; switch away first.\n\nBranches on GitHub\n\nBranches can be pushed like         main   , so teammates can see or review them:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 778,
+      "end_char": 1167
+    }
+  },
+  {
+    "id": "a4a65666ab3deeb4dac2012dd0fec8c81ec6c4b375d2a76975658638e31b8b22",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 35,
+    "text": "          Git Bash\n\n  $ git push -u origin feature-payment\n  To https:-/github.com/krish-patel/amroli-canteen.git\n   * [new branch]      feature-payment -> feature-payment\n  branch 'feature-payment' set up to track 'origin/feature-payment'.\n  $ git branch -a\n    change-timing\n    feature-cart\n  * feature-payment\n    main\n    remotes/origin/feature-payment\n    remotes/origin/main\n\n git branch -a       shows all branches, including the remote-tracking ones\n( remotes/origin/…       ).",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 0,
+      "end_char": 486
+    }
+  },
+  {
+    "id": "e982ddb6e6c9025ec8e05f70082daeb0b70e62033a50f584865e4abd683bede4",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 35,
+    "text": "Team branching workflow\n\nHetvi's four rules for the Amroli Canteen team:\n\n1. Never commit directly to        main   . main    must always work.\n\n2. One feature = one branch:         feature-cart      , fix-total     .\n\n3. Pull before you start, so you branch from the latest           main   .\n\n4. Merge small and often. Small branches mean small conflicts.\n\n          Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 488,
+      "end_char": 865
+    }
+  },
+  {
+    "id": "33020a46f4ec8805416cc97b2c2b4a4b354f7cdbeefb4a5303435d4f3f56cd5f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 35,
+    "text": "  $ git switch main\n  $ git pull\n  $ git switch -c feature-search\n  $ git add .\n  $ git commit -m \"Add menu search box\"\n  $ git switch main\n  $ git merge feature-search\n  $ git branch -d feature-search\n\nIn Unit 5 you'll replace the local merge with a pull request on GitHub, so a teammate\nreviews the work first.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 867,
+      "end_char": 1179
+    }
+  },
+  {
+    "id": "bb5b939eee48a685910d6663cbbf20ff82c7c6cc3955d3c8036f67e9c171bf9e",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 36,
+    "text": "Unit 3 summary\n\n   A branch is a movable label on a commit; HEAD marks the branch you are on.\n\n    git branch      lists/creates;  git switch     (or  checkout    ) moves;    -c  /  -b  create\n   and move.\n\n   Merge into the branch you are on:        git switch main        then  git merge feature-x        .\n\n   Fast-forward just moves the label; a three-way merge creates a merge commit.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 0,
+      "end_char": 389
+    }
+  },
+  {
+    "id": "25dc67464c419cd7fdaed01178edfec345ac90919973a7dcfc4f21490f142b63",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 36,
+    "text": "   A conflict = both sides changed the same lines. Edit, remove markers,              git add    ,\n    git commit      (or git merge --abort       ).\n\n    git branch -d       deletes merged branches;       -D   forces;   git push origin --\n   delete    removes it from GitHub.\n\nPractise with Missions M-08 to M-11, then take the Unit 3 quiz.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_3",
+      "section_title": "Branching and Merging",
+      "start_char": 391,
+      "end_char": 732
+    }
+  },
+  {
+    "id": "8fcafe22cc4dac5835553f0d9e73cae06653f6bfeaa847f37d89175347cdf58a",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 37,
+    "text": "    CHAPTER 4 · UNIT 4 · 6 HOURS\n    Advanced Git Commands\n\n    Read history like a detective, park work with stash, mark releases with tags, and undo mistakes\n    safely.\n\n      log · diff · show stash     Tags     reset    Undoing: revert, reset, checkout\n\n    Practise online: missions M-12, M-13, M-14, M-15\n\nThe ₹0 mystery",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 0,
+      "end_char": 327
+    }
+  },
+  {
+    "id": "82f630a2dcc77999f2d72b22d1766edfc45b81da91f24f96acc560e12f32dade",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 37,
+    "text": "A week before the Spectrum 2026 tech fest, Mr. Desai, the canteen manager, phones\nHetvi: \"The cart says the total is ₹0!\" Nobody remembers touching the cart code. In\nUnit 1 this would have been a disaster. With Git, it's a detective story: the history\nrecords every change, who made it, when and why.\n\nIn this unit you will learn to:\n\n   read history (   git log    ,  git show    ,  git diff    ),\n\n   park unfinished work (      git stash     ),\n\n   mark releases (     git tag    ),",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 329,
+      "end_char": 814
+    }
+  },
+  {
+    "id": "f2936bf3a64e645de5dab1c3d925406829f2268c94aeffcf3db4285096946ea8",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 37,
+    "text": "   and undo mistakes safely (        git restore     ,  git reset    ,  git revert     ).",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 816,
+      "end_char": 905
+    }
+  },
+  {
+    "id": "139981e688bde06f69bbf62c378f10e34a5d8496e01865d266614a946b690d1b",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 38,
+    "text": "Reading history:          git log\n\n          Git Bash\n\n  $ git log\n  commit be6e58670ebd8d0c94d25d66a5ca7b213c10e50c (HEAD -> main)\n  Author: Krish Patel <krish@example.com>\n  Date:   Fri Oct 23 06:18:46 2026 +0530\n\n      Add tea to menu\n\n  commit 03474ce19d00da77f18110754b73539ef13411e2\n  Author: Dhruvi Patel <dhruvi@example.com>\n  Date:   Fri Oct 23 06:18:46 2026 +0530\n\n      Refactor cart total\n\nThe full log is long; these options make it useful:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 0,
+      "end_char": 453
+    }
+  },
+  {
+    "id": "2ab95d4a92973ef7a0905f2e187c66611899b1e9286fa2e90ec0da6bac60c153",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 38,
+    "text": "  Command                                            Shows\n\n   git log --oneline                                 one line per commit\n\n   git log -n 3     or  git log -3                   only the last 3 commits\n\n   git log --oneline --graph --all                   every branch, drawn as a graph\n\n   git log --author=\"Dhruvi\"                         commits by one person\n\n   git log --grep=\"cart\"                             commits whose message contains \"cart\"",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 455,
+      "end_char": 918
+    }
+  },
+  {
+    "id": "5a76c12028ad2d1368404d6536729361c46f994f378d7cc4128122235b93faf7",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 38,
+    "text": "   git log -- cart.js                                commits that changed      cart.js\n\n   git log --stat                                    which files each commit changed\n\nThe detective work begins. Which commits touched the cart?",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 920,
+      "end_char": 1152
+    }
+  },
+  {
+    "id": "ec99b5268d6c3550a3b3752399af9dbcb99664eccbc88dc59c46148325b8f6e8",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 39,
+    "text": "          Git Bash\n\n  $ git log --oneline\n  be6e586 (HEAD -> main) Add tea to menu\n  03474ce Refactor cart total\n  63a4905 Add vada pav\n  1d297a5 Add menu\n  $ git log --oneline -- cart.js\n  03474ce Refactor cart total\n\n   💡Press q to quit\n\n   If the log is longer than the screen, Git Bash shows it page by page. Use ↑ ↓ or\n   Space to scroll and q to quit.\n\nInspecting one commit:               git show\n\n          Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 0,
+      "end_char": 424
+    }
+  },
+  {
+    "id": "1488b4b61ae77ecd46a5eb1bc6e577db3c9b496be66a185526645a67192603af",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 39,
+    "text": "  $ git show HEAD~1\n  commit 03474ce19d00da77f18110754b73539ef13411e2\n  Author: Dhruvi Patel <dhruvi@example.com>\n  Date:   Fri Oct 23 06:18:46 2026 +0530\n\n      Refactor cart total\n\n  diff --git a/cart.js b/cart.js\n  new file mode 100644\n  index 0000000-.0cd9610\n  --- /dev/null\n  --+ b/cart.js\n  @@ -0,0 +1 @@\n  +total = 0\n\nFound it:   total = 0    . Now the team knows what changed, who changed it and when,\nand can ask Dhruvi why.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 426,
+      "end_char": 860
+    }
+  },
+  {
+    "id": "2955d1b9952befc995e47e26b014439317cf959aa0e6513eb803a92ad6a4bdec",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 39,
+    "text": "Naming commits. You can refer to a commit by its short hash (              03474ce    ), a branch or\ntag name (   main   , v1.0   ), or relative to HEAD:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 862,
+      "end_char": 1015
+    }
+  },
+  {
+    "id": "7dbfb2cc24b2640499efb5ed47f7c3d97a7ce4a5f6b2a2c03aaf2aa499b34d55",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 40,
+    "text": "  Name                     Means\n\n   HEAD                    the commit you are on now\n\n   HEAD~1                  one commit before HEAD (its parent)\n\n   HEAD~3                  three commits back\n\n   main~2                  two commits before the tip of     main\n\n git show HEAD:menu.txt           prints a file as it was in that commit.\n\nSeeing changes:           git diff\n\n git diff     shows line-by-line differences. Lines starting with           -   were removed,      +\nwere added.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 0,
+      "end_char": 489
+    }
+  },
+  {
+    "id": "3f13681b05ae78b0a60e9cfbcc036728a8b03eb6be5546251fabed477b069c6f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 40,
+    "text": "          Git Bash\n\n  $ echo \"Coffee 20\" -> menu.txt\n  $ git diff\n  diff --git a/menu.txt b/menu.txt\n  index 49bfe2c-.ef592dd 100644\n  --- a/menu.txt\n  --+ b/menu.txt\n  @@ -1,3 +1,4 @@\n   Samosa 15\n   Vada Pav 20\n   Tea 10\n  +Coffee 20\n  $ git add menu.txt\n  $ git diff\n  $ git diff --staged\n  diff --git a/menu.txt b/menu.txt\n  index 49bfe2c-.ef592dd 100644\n  --- a/menu.txt\n  --+ b/menu.txt\n  @@ -1,3 +1,4 @@\n   Samosa 15\n   Vada Pav 20\n   Tea 10\n  +Coffee 20",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 491,
+      "end_char": 952
+    }
+  },
+  {
+    "id": "824a7f75e6ec45d2ea925148e37174556f3f1b7493dcd1c323f12639994feea6",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 41,
+    "text": "Notice that after    git add    , plain  git diff     shows nothing: the change moved to the\nstaging area. Each form of       diff    compares two of the three stages:\n\n  Command                                Compares\n\n   git diff                              working directory ↔ staging area (unstaged changes)\n\n   git diff --staged                     staging area ↔ last commit (what you're about to\n                                         commit)",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 0,
+      "end_char": 452
+    }
+  },
+  {
+    "id": "3b4578900137ad9cbaa7750f149cf690045cafd79de175fb8a6d813fd39e9d65",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 41,
+    "text": "   git diff main feature-                two branches\n  cart\n\n   git diff HEAD~2 HEAD                  two commits (add     --stat   for a summary)\n\nParking work:         git stash\n\nKrish is halfway through the cart when Hetvi messages: \"The samosa price is wrong on\nthe live demo. Fix it NOW!\" His cart code is broken and not ready to commit.\n\n   🧠Saving your game mid-level",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 454,
+      "end_char": 829
+    }
+  },
+  {
+    "id": "b2bfe03fc8b3af260fdcf46c011612227a989879db293f3530709b38f22ebb2f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 41,
+    "text": "    git stash      is like pausing a game and saving it in a slot. Your half-done changes\n   are put in a drawer, the working tree becomes clean, you fix the urgent bug, then\n   you take your changes back out exactly as they were.\n\n          Git Bash\n\n  $ git status -s\n   M cart.js\n  $ git stash\n  Saved working directory and index state WIP on main: 88f8fde Add coffee\n  $ git status\n  On branch main",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 831,
+      "end_char": 1233
+    }
+  },
+  {
+    "id": "5195289b5665a8e25f1bd13562ae043ddb8ded016073fdd97768527bc89971d5",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 41,
+    "text": "  nothing to commit, working tree clean\n  $ git stash list\n  stash@{0}: WIP on main: 88f8fde Add coffee",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 1235,
+      "end_char": 1338
+    }
+  },
+  {
+    "id": "78712431a69476385e424d266ba1f5e4b6a6e85bb6118e8612b51fc2ee892aa0",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 42,
+    "text": "Now fix the urgent bug and commit it, then bring the cart work back:\n\n          Git Bash\n\n  $ git stash pop\n  On branch main\n\n  Changes not staged for commit:\n    (use \"git add <file>--.\" to update what will be committed)\n    (use \"git restore <file>--.\" to discard changes in working directory)\n            modified:   cart.js\n\n  no changes added to commit (use \"git add\" and/or \"git commit -a\")\n  Dropped refs/stash@{0} (37aff8fdb12a0f05787c4165c766f0ca3261096d)",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 0,
+      "end_char": 464
+    }
+  },
+  {
+    "id": "8dd2340bc627836a07006751cadfa8f56dea40938bc19b9e8449c5bb4b07fdd3",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 42,
+    "text": "  Command                                        Does\n\n   git stash    /  git stash push -m             save changes and clean the working tree\n  \"msg\"\n\n   git stash list                                list saved stashes ( stash@{0}     is the newest)\n\n   git stash pop                                 bring back the newest stash and remove it from\n                                                 the list\n\n   git stash apply                               bring it back but keep it in the list",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 466,
+      "end_char": 960
+    }
+  },
+  {
+    "id": "6bcecdb2aae7c391696aa63931c6473291401fbce69454856ce920438a3a7e12",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 42,
+    "text": "   git stash drop                                delete a stash without applying it\n\n   📝Untracked files are not stashed\n\n   By default,    git stash      saves changes to tracked files. Brand-new files you\n   never added stay where they are.\n\nMarking releases:           git tag\n\nOn the day of the tech fest, Hetvi wants a permanent name for \"the version we\ndemonstrated\". Commit hashes are hard to remember, and branches move. Tags don't\nmove.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 962,
+      "end_char": 1407
+    }
+  },
+  {
+    "id": "91220ca7fad99cf3989ec2054b2f49c916f8b028408cfb2cdf081aa53c0033b6",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 43,
+    "text": "          Git Bash\n\n  $ git tag v1.0\n  $ git tag -a v1.1 -m \"Menu and cart released for Spectrum 2026\"\n  $ git tag\n  v1.0\n  v1.1\n  $ git log --oneline -3\n  07f793e (HEAD -> main, tag: v1.0, tag: v1.1) Finish cart\n  26ff36d Fix samosa price\n  88f8fde Add coffee\n\n  Kind                        Command                        Stores\n\n  Lightweight                  git tag v1.0                  just a name for the commit",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 0,
+      "end_char": 418
+    }
+  },
+  {
+    "id": "13ee064834f4dd7dd85bc8de452129160d982073f706e86a744bf8f085a2b785",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 43,
+    "text": "  Annotated (for               git tag -a v1.1 -m            name + message + who tagged it +\n  releases)                   \"…\"                            date\n\n git show v1.1       shows the tag's message and the commit. Tags are not pushed\nautomatically: use      git push origin v1.1        , or  git push origin --tags          for all of\nthem. Delete a tag with     git tag -d v1.0       .\n\nUndoing changes: which command?",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 420,
+      "end_char": 847
+    }
+  },
+  {
+    "id": "9eff817c9d26a66754dc0bf9784957cd8e268a0f16cfee64e6a20ba3cf57f72a",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 43,
+    "text": "Git has several \"undo\" commands. Choosing the right one depends on two questions:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 849,
+      "end_char": 930
+    }
+  },
+  {
+    "id": "0636a1612b3d564de276f43c862ce3351b7b91ca7c2c5a246c1b31d25d97221d",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 44,
+    "text": "                                          Is the change committed?\n\n                         NO                                                  YES\n\n      Edited, not staged →   git restore                           Is it pushed to GitHub?\n      <file>\n      (classic form:  git checkout --                     Not pushed →     git reset   (--soft / --\n      <file>  )                                           mixed / --hard)",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 0,
+      "end_char": 427
+    }
+  },
+  {
+    "id": "522a66bbdf4d6d6e745bd37e90f56b4420b438e492c6777d1e003245d3216266",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 44,
+    "text": "      Staged by mistake →    git restore --               Pushed →    git revert <commit>\n      staged <file>                                       (adds an \"undo\" commit; safe for the\n                                                          team)\n\n   ⚠The golden rule of undo\n\n   Not pushed yet?       reset     is fine: you're only rewriting your own history. Already\n   pushed? Use       revert    . It adds a new commit and never rewrites history your\n   team already has.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 429,
+      "end_char": 906
+    }
+  },
+  {
+    "id": "8ac5a5386b77cc8902fad9202b015a90c4e2016fe891418b2456216e7628f775",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 44,
+    "text": "Discarding edits:           git restore         (and     checkout --        )\n\nYou edited a file, it's a mess, and you want the last committed version back:\n\n           Git Bash\n\n  $ echo \"oops\" -> menu.txt\n  $ git restore menu.txt\n  $ git status -s\n\nThe classic command does the same thing:              git checkout -- menu.txt            . (The  --\nmeans \"what follows is a file, not a branch\".)",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 908,
+      "end_char": 1306
+    }
+  },
+  {
+    "id": "1cb120f69d3f5bc4941ddf03c4f719622b1a1c0b153464bbeb0d1a03d30cf70f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 45,
+    "text": "   ⚠No undo for restore\n\n    git restore <file>        permanently throws away the uncommitted edits in that\n   file. Git never saved them, so it can't bring them back.\n\nMoving back in time:            git reset\n\n git reset     moves the current branch back to an earlier commit. The three modes\ndecide what happens to the changes from the commits you \"undo\":\n\n    Command                     Moves the             Staging area              Your files\n                                branch back",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 0,
+      "end_char": 495
+    }
+  },
+  {
+    "id": "c3aaf7f3e646d2aee3d84205236ad20414ccdb57e8791d3e20b48992f4cb61ee",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 45,
+    "text": "     git reset --soft           ✓                     changes stay staged       kept\n    HEAD~1\n\n     git reset HEAD~1     (-    ✓                     changes become            kept\n    -mixed)                                           unstaged\n\n     git reset --hard           ✓                     cleared                   ⚠ changes\n    HEAD~1                                                                      deleted\n\n          Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 497,
+      "end_char": 940
+    }
+  },
+  {
+    "id": "37b42cbb2b6d7b80601dc97086a8bbeb5044735afa5a79a6dce5d969edef6d16",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 45,
+    "text": "  $ echo \"Dosa 40\" -> menu.txt -& git commit -qam \"add dosa\"\n  $ git reset --soft HEAD~1\n  $ git status -s\n  M  menu.txt\n  $ git commit -qm \"Add dosa to menu\"\n  $ git reset HEAD~1\n  Unstaged changes after reset:\n  M         menu.txt\n  $ git commit -qam \"Add dosa to menu\"\n  $ git reset --hard HEAD~1\n  HEAD is now at 07f793e Finish cart\n\n    --soft   : perfect for fixing a bad commit message or adding a forgotten file.\n   Changes stay staged.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 942,
+      "end_char": 1386
+    }
+  },
+  {
+    "id": "0e34925f54a8c1e2d8e0309fb9e618a7de344f8b0480fc80330633b4d6d305a3",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 46,
+    "text": "    --mixed     (the default): undo the commit and decide again what to stage.\n\n    --hard   : throw the commit and its changes away. ⚠ Use with care.\n\n git reset <file>        (without a mode) simply unstages a file, like        git restore --\nstaged   .\n\nUndoing a pushed commit:                 git revert\n\nKrish pushed Finish cart, and it broke the live demo. His teammates have already pulled\nit, so rewriting history with   reset    would cause chaos. Instead he reverts it:\n\n          Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 0,
+      "end_char": 500
+    }
+  },
+  {
+    "id": "7e12cd6370d730cafd03f95173f3b83e34af7ddfa724ddbd2735dc6ba4814ff5",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 46,
+    "text": "  $ git revert HEAD --no-edit\n  [main c47f6d3] Revert \"Finish cart\"\n   1 file changed, 1 deletion(-)\n  $ git log --oneline -3\n  c47f6d3 (HEAD -> main) Revert \"Finish cart\"\n  07f793e (tag: v1.0, tag: v1.1) Finish cart\n  26ff36d Fix samosa price\n\n git revert <commit>         creates a new commit that does the opposite of the old one.\nThe history stays honest: anyone can see the mistake and its fix. Without              --no-edit    ,\nGit opens the editor with a ready-made message.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 502,
+      "end_char": 985
+    }
+  },
+  {
+    "id": "34471e18b4aa01e35dbf486a1e1d5c25362ad7d74e7c990b8569154aa8f263c8",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 46,
+    "text": "                             reset                                revert\n\n  How                       moves the branch back                 adds a new \"opposite\" commit\n\n  History                   rewritten (commits disappear)         kept (nothing disappears)\n\n  Safe after pushing?       ⚠ No                                  ✅ Yes\n\nVisiting the past: detached HEAD\n\n git checkout <commit>         lets you look at an old version of the whole project:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 987,
+      "end_char": 1441
+    }
+  },
+  {
+    "id": "3dc3c42a1d67394dec882053dc6cca1982b2b7f22afff4ad2a7cbc929abcb15a",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 47,
+    "text": "          Git Bash\n\n  $ git checkout HEAD~2\n  Note: switching to 'HEAD~2'.\n\n  You are in 'detached HEAD' state. You can look around, make experimental\n  changes and commit them, and you can discard any commits you make in this\n  state without impacting any branches by switching back to a branch.\n  …\n  HEAD is now at 26ff36d Fix samosa price\n  $ git switch main\n  Switched to branch 'main'",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 0,
+      "end_char": 390
+    }
+  },
+  {
+    "id": "a851a6ecc922990657344e8790a516ffd70cfe37bce5f792c7cfdd4a18dc8a22",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 47,
+    "text": "Detached HEAD means HEAD points to a commit instead of a branch. Look around, run\nthe old code, then     git switch main       to come back. If you want to keep work done\nthere, create a branch first:    git switch -c old-idea         .\n\n   💡Time travel in the Playground\n\n   In the Playground, open the Graph tab and press ⏳ Time travel to slide through\n   your history and read any file at any commit, without changing anything.\n\nUnit 4 summary",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 392,
+      "end_char": 838
+    }
+  },
+  {
+    "id": "c0994adaabffb8946694e30e0a65f5d958e8b6a982ddfec7047e68d1654580bf",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 47,
+    "text": "    git log     (with  --oneline    ,  --graph --all      , -n  , --author     , --grep   ,  --\n   file   ) reads history;   git show     inspects one commit.\n\n    git diff     = unstaged;     git diff --staged        = staged;    git diff A B      = two\n   commits or branches.\n\n    git stash     parks work;     git stash pop       brings it back.\n\n    git tag -a v1.0 -m \"…\"          marks a release; push tags explicitly.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 840,
+      "end_char": 1265
+    }
+  },
+  {
+    "id": "3369a772f98c74b648fd528cb691224d1658a8227511084fac3e98d7c1b28081",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 47,
+    "text": "   Undo:    restore    (uncommitted edits),      reset    (local commits: soft / mixed / hard),\n    revert    (pushed commits).\n\n    git checkout <commit>          visits the past (detached HEAD);       git switch main\n   returns.\n\nPractise with Missions M-12 to M-15, then take the Unit 4 quiz.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_4",
+      "section_title": "Advanced Git Commands",
+      "start_char": 1267,
+      "end_char": 1562
+    }
+  },
+  {
+    "id": "6df35ef17ad2ee536e43cf37c6e14c9c58925992d8019ea5abbd3257135945a2",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 48,
+    "text": "    CHAPTER 5 · UNIT 5 · 4 HOURS\n    Introduction to GitHub\n\n    Find your way around GitHub, manage repositories, use issues, and contribute with forks and pull\n    requests.\n\n      Navigating the GitHub interface    Creating & managing repositories      Issues & pull requests\n\n      Forking repositories    Git cheat sheet\n\n    Practise online: GitHub labs L-01, L-02, L-03, L-04\n\nGoing public",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 0,
+      "end_char": 396
+    }
+  },
+  {
+    "id": "3475d3479fdfb3808c606dfce5cb6f14ffb42425027a535cc8891de6464ccb93",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 48,
+    "text": "The Amroli Canteen app is a success. Mr. Desai wants to report bugs directly, juniors\nfrom another college want to use the code for their canteen, and Hetvi wants every\nchange reviewed before it reaches            main   .\n\nSo far you have used GitHub as a place to store commits. In this unit you'll use it as a\nplace to work together: browsing projects, managing repositories, tracking work with\nissues, reviewing changes with pull requests, and contributing to other people's\nprojects with forks.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 398,
+      "end_char": 897
+    }
+  },
+  {
+    "id": "565ec30e3212a4c1528f17147b62e065e3fcfb65e25f12f94e7c32a9a6ab3b11",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 48,
+    "text": "   📝GitHub's design changes\n\n   GitHub updates its website regularly. Buttons may move or look slightly different\n   from these notes, but the ideas (repositories, issues, pull requests, forks) stay the\n   same.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 899,
+      "end_char": 1110
+    }
+  },
+  {
+    "id": "ce483edbc8233e91f825395c6b67210c7441158d57ef21019719f0de66c49ce4",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 49,
+    "text": "A tour of a repository page\n\n    krish-patel / amroli-canteen       Public                       👁 Watch      ⑂ Fork   3     ☆ Star   12\n\n    <> Code     Issues   2    Pull requests  1    Actions   Settings\n\n      ⎇ main ▾                                 3 branches · 2 tags                               <> Code ▾\n\n    Hetvi Merge pull request #4 from krish-patel/feature-cart · a1b2c3d · 2 hours ago · 🕒 24 commits\n\n    📄 README.md Add setup steps\n\n    📄 cart.js Add cart total",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 0,
+      "end_char": 479
+    }
+  },
+  {
+    "id": "c2d1e1ea95e80f4473131a46e6062de1024932a3913201ced26eeddec4361c05",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 49,
+    "text": "    📄 menu.txt Add vada pav to menu\n\n    README.md\n    Amroli Canteen: order snacks before the lunch break.\n\n  1. Owner / repository and whether it is public or private\n\n  2. Watch · Fork · Star: follow, copy to your account, bookmark\n\n  3. Tabs: Code, Issues (tasks and bugs), Pull requests (proposed changes), Actions (automation),\n     Settings (owners only)\n\n  4. Branch menu to view any branch; counts of branches and tags\n\n  5. Code button: the clone URL (HTTPS or SSH) and Download ZIP",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 481,
+      "end_char": 973
+    }
+  },
+  {
+    "id": "5b3bb805f249061d6d1496cee61d161d93c92f802f59996359e3602a3b954569",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 49,
+    "text": "  6. Latest commit and the full commit history\n\n  7. README.md is shown below the files: the project's front page\n\nSome useful things to know:\n\n   Press     t  on a repository page to search for a file, and              .   to open it in a web code\n   editor.\n\n   Click 🕒 commits to see the history (like                git log    ), and click any commit to see its\n   diff (like   git show     ).\n\n   Open a file and choose History (its commits) or Blame (who last changed each line).",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 975,
+      "end_char": 1460
+    }
+  },
+  {
+    "id": "908011df0be296feeaf23a55447262102c9a27a15168066bacb1c2b8e5aa870f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 49,
+    "text": "   The branch menu lets you look at any branch without cloning.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 1462,
+      "end_char": 1525
+    }
+  },
+  {
+    "id": "e1caa734dc54144229d4a832bf5cf4e846ad72f6f4dcb743965e7664fd773991",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 50,
+    "text": "Your profile and finding projects\n\nYour profile page (    github.com/<username>         ) shows your profile README (Lab L-01),\npinned repositories and the contribution graph: the green squares that grow with\nevery commit linked to your email.\n\n  Action                    What it does\n\n  ⭐ Star                    bookmark a project and show appreciation; stars measure\n                            popularity\n\n  👁 Watch                   get notifications about a repository's activity",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 0,
+      "end_char": 486
+    }
+  },
+  {
+    "id": "87ca25ceb4eb3d0242d178106ec344985c634537718ba316dea3b95738fe8646",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 50,
+    "text": "  ⑂ Fork                    make your own copy of someone else's repository (below)\n\n  🔍 Search /                find projects by topic, language or name\n  Explore\n\n   💡Your portfolio\n\n   Recruiters look at GitHub profiles. Pin your best three repositories, give each a\n   clear README, and commit regularly. Steady green squares tell a story.\n\nCreating a repository on GitHub\n\nClick + → New repository. The form asks for:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 488,
+      "end_char": 910
+    }
+  },
+  {
+    "id": "91ab906cf4ff6b538459ba28332fb13d8b8dfeda8cce840fdc46a1eb734d7ef7",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 51,
+    "text": "  Field                     Advice\n\n  Repository name           short, lowercase, hyphens:      amroli-canteen\n\n  Description               one sentence: what it is\n\n  Public / Private          public = anyone can see; private = only people you invite\n\n  Add a README              yes if you will  git clone     it; no if you will push an existing project\n\n  .gitignore                pick your language (Python, Node, C…) to ignore build files\n  template",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 0,
+      "end_char": 455
+    }
+  },
+  {
+    "id": "8844cb9823704865ad477083778bb1205d91564433ac87b7773960fc6587397e",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 51,
+    "text": "  License                   for open source, e.g. MIT; without one, others may not legally reuse\n                            your code\n\nYou can also create a file directly on GitHub (Add file → Create new file) and commit it\nin the browser. That creates a real commit, which you then                 git pull      to your\ncomputer.\n\nManaging a repository\n\nEverything under Settings is visible only to owners and admins:\n\n  Setting                                Use",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 457,
+      "end_char": 922
+    }
+  },
+  {
+    "id": "1b48577ac031b1bd1fa607537195faf83232a49c4c649ac235edf95f5c62e5f3",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 51,
+    "text": "  General → Repository name              rename (GitHub redirects old links)\n\n  General → Default branch               the branch people see first (usually      main  )\n\n  Collaborators                          give teammates push access (they must accept the\n                                         invitation)\n\n  Branches → Branch                      e.g. \"require a pull request before merging into       main  \"\n  protection",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 924,
+      "end_char": 1354
+    }
+  },
+  {
+    "id": "016f2f03568f89f8fea54709697c9bfa971f87fc4b9ee603274bd314716ac2d9",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 51,
+    "text": "  Pages                                  publish a website from the repository (see Bonus)\n\n  Danger zone                            change visibility, transfer, archive or delete (no undo)",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 1356,
+      "end_char": 1545
+    }
+  },
+  {
+    "id": "fcf102cbaaa71070c5ddf0668034e3bb3a6876747212c2c7d68787a72fa5e808",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 52,
+    "text": "Releases turn a tag (Unit 4) into a downloadable version with notes: Releases → Draft a\nnew release → choose tag        v1.0  .\n\nIssues: tracking work\n\nAn issue is a discussion about one task: a bug, a feature request, a question. Every\nissue gets a number (     #3 ).\n\n   🍽Mr. Desai reports a bug\n\n   Title: Cart total wrong when the same item is added twice Body: Steps: 1) add\n   Samosa, 2) add Samosa again, 3) open cart. Expected ₹30, shows ₹15. Phone:\n   Android, Chrome.\n\nA good issue has:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 0,
+      "end_char": 496
+    }
+  },
+  {
+    "id": "d655896658dda93400450b998dd94f2cd651798868317e229aafd0151813f41f",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 52,
+    "text": "   a clear title that names the problem,\n\n   steps to reproduce, expected vs actual result,\n\n   screenshots or error messages if possible.\n\nThen the team:\n\n   adds labels (   bug  ,  enhancement     , good first issue       ),\n\n   assigns someone,\n\n   discusses in comments (Markdown works; mention people with                  @username    ).\n\nClose an issue from a commit by writing a keyword and the number in the message:\n\n          Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 498,
+      "end_char": 943
+    }
+  },
+  {
+    "id": "5bb7c228baefc89619fa3715507a31b24ad3b29b4a4879672ec828342774744c",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 52,
+    "text": "  $ git commit -m \"Fix cart total for repeated items (fixes #3)\"\n  $ git push\n\nWhen that commit reaches the default branch, GitHub closes issue #3 automatically.\nKeywords that work include       fixes   ,  closes    and   resolves    .",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 945,
+      "end_char": 1180
+    }
+  },
+  {
+    "id": "dc2301ee4c79dfa6ed1dc2606123291ff58941f24a9ff3de4676bde97fc398a4",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 53,
+    "text": "Pull requests: proposing changes\n\nA pull request (PR) says: \"Here is my branch. Please review it and merge it into                main   .\"\nIt is how professional teams merge work, because a teammate checks the code first.\n\n     1                                                  2\n\n   Branch                                             Commit & push\n    git switch -c feature-cart                         git push -u origin feature-cart",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 0,
+      "end_char": 437
+    }
+  },
+  {
+    "id": "9834151016d5b3e2d5c4e081c857ed743ee26a6013d97d1dda0266d85da6ac5b",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 53,
+    "text": "    3                                                   4\n   Open a PR                                          Review\n   on GitHub: Compare & pull request                  comments · request changes · approve\n\n    5                                                   6\n\n   Merge                                              Pull\n   into main  on GitHub, then delete the branch        git switch main && git pull",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 439,
+      "end_char": 850
+    }
+  },
+  {
+    "id": "4db4a5c7429d300bc09300cd77d27ad2f267223e2bd7747c8982caecb075bbdc",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 53,
+    "text": "Opening a PR: after      git push -u origin feature-cart              , GitHub shows a yellow\nCompare & pull request banner. Choose base:               main   ← compare:      feature-cart      ,\nwrite a title and a description (what, why, how to test,         Closes #3     ), and click Create\npull request.\n\nReviewing a PR (Hetvi's job):\n\n   Files changed tab: the diff, like      git diff main feature-cart            .\n\n   Click a line to add a comment.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 852,
+      "end_char": 1308
+    }
+  },
+  {
+    "id": "0100f30ea9c2f7239c855bc5532dd20c075cb420f43598140e66a2e023a05bed",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 53,
+    "text": "   Finish the review: Comment, Approve, or Request changes.\n\n   The author fixes things by pushing more commits to the same branch. The PR\n   updates by itself.\n\nMerging a PR offers three buttons:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 1310,
+      "end_char": 1506
+    }
+  },
+  {
+    "id": "87af85a071530a6808bc772da363a0efdc281bfebafbb0690531a5ab770d8d69",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 54,
+    "text": "  Option                        Result\n\n  Create a merge                keeps all commits plus a merge commit (like       git merge --no-\n  commit                        ff )\n\n  Squash and merge              combines the branch into one commit on        main\n\n  Rebase and merge              replays the commits on top of     main  , no merge commit\n\nAfter merging, click Delete branch, then update your computer:                git switch main\nand   git pull    .\n\n   ⚠Conflicts in a PR",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 0,
+      "end_char": 487
+    }
+  },
+  {
+    "id": "d674e90954ef0aa38910c59395d2ca5574739b9bf47dc0829563c405240faea3",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 54,
+    "text": "   If main    changed the same lines, GitHub says \"This branch has conflicts that\n   must be resolved\". Fix it exactly as in Unit 3: merge           main    into your branch\n   locally, resolve, commit and push. (Small conflicts can also be resolved in\n   GitHub's web editor.)\n\nForking: contributing to other projects\n\nYou can't push to a repository you don't own. To contribute anyway, you fork it: GitHub\ncopies it to your account, you change your copy, and you send a pull request back.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 489,
+      "end_char": 979
+    }
+  },
+  {
+    "id": "b5accd129e0b62742ead7b1a70bfd07e9113962c668ec5a59f5db8c61f974667",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 55,
+    "text": "                                            Original repository\n                                        sbccas/git-practice-2026\n                                        \"upstream\": you can't push here\n\n                           1 Fork (button on GitHub) →         ← 7 Pull request\n\n                                                 Your fork\n                                     krish-patel/git-practice-2026\n                                         \"origin\": your copy on GitHub",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 0,
+      "end_char": 479
+    }
+  },
+  {
+    "id": "fadb77ac5e228183db226ff8499bcb16f7f1f3db001fa3b7ec039527f2797520",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 55,
+    "text": "                                     2 git clone →       ← 6 git push\n\n                                              Your computer\n                                     3 branch · 4 edit · 5 commit\n                                               local repository\n\n                 Fork                             Clone                     Branch",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 481,
+      "end_char": 825
+    }
+  },
+  {
+    "id": "858343f874b4342bef10406c4720981fd880584a8b37bc7a4d1c3b49a0c30521",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 55,
+    "text": "  Creates        a copy on GitHub, under          a copy on your            a new line of work inside\n                 your account                     computer                  a repository\n\n  Done           the Fork button                   git clone                  git branch     / git\n  with                                                                      switch -c\n\nThe seven-step contribution flow:\n\n           Git Bash",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 827,
+      "end_char": 1259
+    }
+  },
+  {
+    "id": "b35208265001cb7d6ff22e40a3f1b15cca16b7926051bd591f90ef71c739f8a3",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 55,
+    "text": "  $ git clone https:-/github.com/krish-patel/git-practice-2026.git\n  $ cd git-practice-2026\n  $ git remote add upstream https:-/github.com/sbccas/git-practice-2026.git\n  $ git switch -c add-krish-patel\n  $ echo \"# Krish Patel\" > students/krish-patel.md\n  $ git add .\n  $ git commit -m \"Add krish-patel profile card\"\n  $ git push -u origin add-krish-patel",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 1261,
+      "end_char": 1615
+    }
+  },
+  {
+    "id": "a572f3eea959c6af601586b6cac55524f956ee4d990aeda946463c6d24bdf207",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 55,
+    "text": "Then open the pull request from your fork to the original. Later, to get the original's new\ncommits:     git pull upstream main           , or press Sync fork on your fork's GitHub page.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 1617,
+      "end_char": 1803
+    }
+  },
+  {
+    "id": "88dd1d062e528bd503ef05d5c3b5aea1348998c055142176d20ab9cfa8021867",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 56,
+    "text": "Open source etiquette\n\nWell-run projects contain a few standard files:\n\n  File                           Purpose\n\n   README.md                     what the project is, how to install and use it\n\n   LICENSE                       what others may legally do with the code\n\n   CONTRIBUTING.md               how to contribute: branch names, code style, PR rules\n\n   .gitignore                    files Git should not track",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 0,
+      "end_char": 417
+    }
+  },
+  {
+    "id": "64fe0fa63e6700a39c94186b096ecb28a369bd017ff20cc66ad42bdaf294378a",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 56,
+    "text": "Before contributing: read        CONTRIBUTING.md        , look for issues labelled good first issue,\nkeep each PR small and focused, and be polite in reviews.\n\nYour Git cheat sheet\n\nThe full, searchable, printable list is on the Cheat sheet page. The ten commands you'll\nuse most:",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 419,
+      "end_char": 699
+    }
+  },
+  {
+    "id": "4b59419230c76be8fcfcbe43bdf4d4763ea7ec658967e460e7b132cc8f7b2fad",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 57,
+    "text": "  Command                                                           Does\n\n   git status                                                       where is everything?\n\n   git add <file>      / git add .                                  stage\n\n   git commit -m \"…\"                                                save a snapshot\n\n   git pull                                                         get the team's work\n\n   git push                                                         share your work",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 0,
+      "end_char": 496
+    }
+  },
+  {
+    "id": "2039691b57b28adfd89340ae5d2c7034fd8f8cd62e6323ac94199809e3d32836",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 57,
+    "text": "   git switch -c <branch>                                           start a feature\n\n   git merge <branch>                                               bring a branch in\n\n   git log --oneline --graph --all                                  see the history\n\n   git diff                                                         see what changed\n\n   git restore <file>                                               discard an edit\n\nUnit 5 summary",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 498,
+      "end_char": 940
+    }
+  },
+  {
+    "id": "d20a8685fac7d701218a8233ff32a7f7daf91a9234e11cb95818ef648113fbd0",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 57,
+    "text": "   A repository page shows code, history, branches, issues, pull requests and settings;\n   the README is its front page.\n\n   Create repositories with a README (to clone) or empty (to push); choose visibility,\n    .gitignore      and licence.\n\n   Issues track bugs and tasks;         fixes #3     in a commit closes issue 3.\n\n   Pull requests propose merging a branch; teammates review, then merge (merge\n   commit, squash or rebase).",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 942,
+      "end_char": 1375
+    }
+  },
+  {
+    "id": "c373e72473db4bdb5fede2897567a3ee8822c9aac06469a430d2bb364f8e789d",
+    "source_id": "sbccas-git-github-student-ed1-2026-10",
+    "source": "data/git-github-fundamentals-student-edition.pdf",
+    "page": 57,
+    "text": "   Fork = your copy on GitHub; contribute with fork → clone → branch → commit →\n   push → PR;      upstream     points to the original.\n\nPractise with Labs L-01 – L-04, then take the Unit 5 quiz and the final Self-check.",
+    "metadata": {
+      "extraction_status": "ok",
+      "section": "unit_5",
+      "section_title": "Introduction to GitHub",
+      "start_char": 1377,
+      "end_char": 1597
+    }
+  }
+]

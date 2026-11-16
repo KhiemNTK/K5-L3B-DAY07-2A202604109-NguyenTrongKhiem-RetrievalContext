@@ -51,6 +51,14 @@ def hit(chunk, gold):
     return any(chunk['source_id'] == g['source_id'] and chunk['page'] == g['page'] and g['evidence'] in chunk['text'] for g in gold)
 
 
+def validate_search(query, top_k, filters):
+    if not isinstance(query, str) or not query.strip() or type(top_k) is not int or top_k < 1:
+        raise ValueError('A non-empty query and positive integer top_k are required')
+    if (filters is not None and (not isinstance(filters, dict)
+            or any(not isinstance(v, str) or not v.strip() for v in filters.values()))):
+        raise ValueError('Filters must be a dictionary of non-empty string values')
+
+
 class TfidfIndex:
     def __init__(self, chunks):
         self.chunks = chunks
@@ -64,14 +72,18 @@ class TfidfIndex:
         norm = math.sqrt(sum(value * value for value in vector.values())) or 1
         return {term: value / norm for term, value in vector.items()}
 
-    def search(self, question, top_k=3):
+    def search(self, question, top_k=3, *, filters=None):
+        validate_search(question, top_k, filters)
         query = self._vector(Counter(tokenize(question)))
         results = []
         for chunk, vector in zip(self.chunks, self.vectors):
+            if filters and any(chunk['metadata'].get(k) != v for k, v in filters.items()):
+                continue
             score = sum(value * vector.get(term, 0) for term, value in query.items())
             if score > 0:
                 results.append({**chunk, 'score': score, 'strategy': 'tfidf'})
-        return sorted(results, key=lambda c: (-c['score'], c['id']))[:top_k]
+        ranked = sorted(results, key=lambda c: (-c['score'], c['id']))[:top_k]
+        return [{**c, 'rank': rank} for rank, c in enumerate(ranked, 1)]
 
 
 def pack_context(results, budget=800):
@@ -91,12 +103,12 @@ def evaluate(index, questions, budget=800):
     traces = []
     for q in questions:
         start = time.perf_counter()
-        results = index.search(q['question'], top_k=3)
+        results = index.search(q['question'], top_k=3, filters=q.get('filter'))
         context, ids = pack_context(results, budget)
         elapsed_ms = (time.perf_counter() - start) * 1000
         marked = [{**c, 'hit': hit(c, q['gold'])} for c in results]
         traces.append({'query_id': q['id'], 'split': q['split'], 'question': q['question'],
-                       'strategy': 'tfidf', 'top_k': 3, 'budget_chars': budget,
+                       'strategy': 'tfidf', 'top_k': 3, 'budget_chars': budget, 'filter': q.get('filter'),
                        'gold': q['gold'], 'results': marked, 'context': context, 'context_ids': ids,
                        'context_chars': len(context), 'elapsed_ms': elapsed_ms,
                        'hit1': bool(marked and marked[0]['hit']),

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "T01",
+    "split": "test",
+    "topic": "star-vs-watch",
+    "type": "comparison",
+    "question": "According to the book, how do Star and Watch differ on a GitHub repository?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Star bookmarks a project and shows appreciation; Watch subscribes to notifications about its activity.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 50,
+        "evidence": "Star                    bookmark a project and show appreciation; stars measure\n                            popularity\n\n  👁 Watch                   get notifications about a repository's activity"
+      }
+    ],
+    "origin": "New Day 7 test; different answer topic from Day 6 test and Day 7 dev"
+  },
+  {
+    "id": "T02",
+    "split": "test",
+    "topic": "readme-on-repository-creation",
+    "type": "condition",
+    "question": "In the repository creation form, when does the book recommend adding a README, and when should I leave it unchecked?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Add a README if you will clone the repository; do not add one if you will push an existing project.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 51,
+        "evidence": "Add a README              yes if you will  git clone     it; no if you will push an existing project"
+      }
+    ],
+    "origin": "New Day 7 test; different answer topic from Day 6 test and Day 7 dev"
+  },
+  {
+    "id": "T03",
+    "split": "test",
+    "topic": "repository-settings-visibility",
+    "type": "direct",
+    "question": "According to the book, which repository roles can see everything under Settings?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Repository owners and admins.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 51,
+        "evidence": "Everything under Settings is visible only to owners and admins:"
+      }
+    ],
+    "origin": "New Day 7 test; different answer topic from Day 6 test and Day 7 dev"
+  },
+  {
+    "id": "T04",
+    "split": "test",
+    "topic": "good-issue-details",
+    "type": "procedure",
+    "question": "What information should a good GitHub issue contain, including optional supporting material?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "A clear title naming the problem, steps to reproduce, expected versus actual results, and screenshots or error messages if possible.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 52,
+        "evidence": "a clear title that names the problem,\n\n   steps to reproduce, expected vs actual result,\n\n   screenshots or error messages if possible."
+      }
+    ],
+    "origin": "New Day 7 test; different answer topic from Day 6 test and Day 7 dev"
+  },
+  {
+    "id": "T05",
+    "split": "test",
+    "topic": "sync-fork-with-upstream",
+    "type": "procedure",
+    "question": "After contributing from a fork, how can I get new commits from the original repository into my fork, according to the book?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Run git pull upstream main, or use Sync fork on the GitHub page for the fork.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 55,
+        "evidence": "Later, to get the original's new\ncommits:     git pull upstream main           , or press Sync fork on your fork's GitHub page."
+      }
+    ],
+    "origin": "New Day 7 test; different answer topic from Day 6 test and Day 7 dev"
+  },
+  {
+    "id": "T06",
+    "split": "test",
+    "topic": "github-support-sla",
+    "type": "unanswerable",
+    "question": "What guaranteed response time does GitHub promise for a support ticket, according to this book?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The indexed chapters give no support-ticket service level or guaranteed response time; repository activity and issue workflow are different topics.",
+    "absence_check": {
+      "scope": "All 53 indexed physical PDF pages (5-57); appendices are outside the corpus.",
+      "method": "Search the full extracted corpus and read the relevant sections; not a top-k inference.",
+      "terms": [
+        "support",
+        "ticket",
+        "response",
+        "service level",
+        "SLA"
+      ],
+      "matched_pages": {
+        "support": [],
+        "ticket": [],
+        "response": [],
+        "service level": [],
+        "SLA": []
+      },
+      "inspected_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ]
+    }
+  },
+  {
+    "id": "T07",
+    "split": "test",
+    "topic": "github-team-price",
+    "type": "unanswerable",
+    "question": "What exact monthly price per user does the GitHub Team plan cost, according to this book?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The indexed chapters do not describe plan pricing or a monthly per-user price; prices in the canteen example are unrelated.",
+    "absence_check": {
+      "scope": "All 53 indexed physical PDF pages (5-57); appendices are outside the corpus.",
+      "method": "Search the full extracted corpus and read the relevant sections; not a top-k inference.",
+      "terms": [
+        "Team plan",
+        "pricing",
+        "monthly",
+        "per user",
+        "price"
+      ],
+      "matched_pages": {
+        "Team plan": [],
+        "pricing": [],
+        "monthly": [],
+        "per user": [],
+        "price": [
+          6,
+          41,
+          43,
+          46,
+          47
+        ]
+      },
+      "inspected_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ]
+    }
+  }
+]

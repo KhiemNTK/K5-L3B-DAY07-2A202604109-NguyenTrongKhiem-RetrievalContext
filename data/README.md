@@ -1,5 +1,10 @@
 # Định dạng dữ liệu
 
+Corpus thật: [chunks.json](chunks.json), 179 chunk B từ Day 6.
+[day6.json](day6.json) giữ provenance, cấu hình embedding, checksum và attribution CC BY-SA 4.0.
+Đây là dữ liệu đầu vào. Benchmark thật nằm ở [benchmark/dev.json](../benchmark/dev.json) và
+[benchmark/test.json](../benchmark/test.json), xem [schema và cách chấm](../benchmark/README.md).
+
 Các file `example_*.json` chỉ minh họa định dạng, không đủ để nộp bài. Dữ liệu thật là JSON array UTF-8; nếu dùng định dạng khác, ghi cách chuyển trong README.
 
 - **Chunk:** `id`, `text`, `source_id`, `source`, `page`, `metadata`. ID phải duy nhất; giữ phiên bản hoặc ngày nếu có.

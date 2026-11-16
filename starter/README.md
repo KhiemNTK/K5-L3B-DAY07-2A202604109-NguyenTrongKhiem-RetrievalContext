@@ -6,8 +6,17 @@
 | `baseline.py` | TF-IDF lexical baseline, chạy offline |
 | `convert_day6.py` | Chuyển một số trường JSON từ Day 6 |
 | `agent_metrics.py` | Tổng hợp nhãn đánh giá do bạn tự chấm |
+| `day6.py` | Adapter dense thật, kiểm tra snapshot và tái sử dụng model/pgvector Day 6 |
+| `docker-compose.yml` | Dùng lại volume Day 6 trên cổng local 15433 |
+| `benchmark.py` | Kiểm tra schema, split, evidence, filter và checksum benchmark |
+| `retrieval.py` | Hybrid RRF và CLI so sánh dense/TF-IDF/hybrid trên dev |
 
-Starter **chưa phải solution hoàn chỉnh**. Bạn phải nối model và vector store thật, triển khai ít nhất 3 phương pháp retrieval do bạn chọn, gồm dense trên vector store Day 6. Mock chỉ dùng để test code.
+Starter **chưa phải solution hoàn chỉnh**. Checkout này đã nối vector store thật và ba phương pháp retrieval;
+controller dùng model trả lời vẫn chưa được nối. Mock chỉ dùng để test code.
+
+Xem [cấu hình và kết quả](../README.md), [thiết lập từ đầu](../docs/README.md).
+`connect_day6(Path(...))` trả `(retriever, verification)`; retriever tương thích `run_agent`,
+nhưng controller dùng model trả lời vẫn chưa được nối. Chỉ filter `section` được hỗ trợ và phải đến từ query/người dùng.
 
 ## 1. Kết nối agent
 
@@ -27,7 +36,9 @@ python3 -m unittest discover -s tests -v
 python3 starter/baseline.py --chunks data/example_chunks.json --questions data/example_questions.json --split dev --output starter/results/example-dev
 ```
 
-Kết quả có `summary.json` và `traces.json`. Dữ liệu mẫu chỉ có một câu, không đủ để nộp bài. TF-IDF là lexical retrieval, không dùng filter và không thay dense retrieval.
+Kết quả có `summary.json` và `traces.json`. Dữ liệu mẫu chỉ có một câu, không đủ để nộp bài.
+TF-IDF là lexical retrieval, áp dụng filter metadata bằng phép so sánh bằng trước top-k, không thay dense retrieval.
+CLI mẫu chỉ nhận câu có đáp án; với bộ đầy đủ có câu thiếu evidence, dùng [runner so sánh](../benchmark/README.md#chạy-và-tái-lập).
 
 ## 3. Dùng dữ liệu Day 6
 

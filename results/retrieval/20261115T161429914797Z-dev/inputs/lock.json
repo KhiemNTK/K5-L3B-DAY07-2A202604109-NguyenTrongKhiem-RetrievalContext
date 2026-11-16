@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-11-15T16:14:06.962021+00:00",
+  "purpose": "Revision 2: documented dev gold correction; no test change. A checksum is not proof of a historical Git commit.",
+  "sha256": {
+    "benchmark/dev.json": "c4282b184a70f08cd34ae1bafa59774b60e78121ed7c9bdf0809bea734adc697",
+    "benchmark/test.json": "d0e18526650c3e764a98cabf637259487aac3e35791c957a6678e85601f2920e",
+    "benchmark/plan.json": "e3393af1d472bad020c9852a1fe1409c8f33ac9d6d09036cb73230f51ceb1f3f",
+    "data/chunks.json": "59453c0c998b6319de31baf68d4aa72b8482179dc2f8fd0fd422bb07f2458627",
+    "data/day6.json": "20f3ff6b3a817c63cf079061e3c686895064f6b2e3b3ffd1c152c3b1113abd1f"
+  }
+}

@@ -1,0 +1,382 @@
+[
+  {
+    "id": "D01",
+    "split": "dev",
+    "topic": "vcs-record-and-restore",
+    "type": "direct",
+    "question": "What does a version control system record, and what can it restore?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "It records changes to files over time, including who changed what, and can restore an earlier version.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 6,
+        "evidence": "A version control system (VCS) is software that records changes to files over time, so\nyou can see who changed what and bring back any earlier version."
+      }
+    ],
+    "origin": "Day 6 dev q01"
+  },
+  {
+    "id": "D02",
+    "split": "dev",
+    "topic": "distributed-vcs-recovery",
+    "type": "paraphrase",
+    "question": "Why can another developer's copy help recover a project when one computer is lost in a distributed VCS?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Every developer has a complete copy of the project and its whole history, so another copy can be used for recovery.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 8,
+        "evidence": "3. Distributed VCS. Every developer has a complete copy of the project and its whole\nhistory on their own computer. Examples: Git and Mercurial. Like every student owning\na full photocopy of the book: if one copy is lost, any other copy can replace it."
+      }
+    ],
+    "origin": "Day 6 dev q02"
+  },
+  {
+    "id": "D03",
+    "split": "dev",
+    "topic": "shared-pc-author",
+    "type": "condition",
+    "question": "In Unit 1, how should a student set their Git author name on a shared lab PC so the next student's commits do not use that name?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Set the name without --global inside the student's own project folder, so it applies to that repository.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 11,
+        "evidence": "On a shared lab PC, set your name without              --global     inside your own project\n   folder, so the next student's commits are not labelled with your name."
+      }
+    ],
+    "origin": "Day 6 dev q03",
+    "filter": {
+      "section": "unit_1"
+    },
+    "filter_reason": "The question explicitly names this Unit; applied unchanged to all methods."
+  },
+  {
+    "id": "D04",
+    "split": "dev",
+    "topic": "git-init-repository",
+    "type": "direct",
+    "question": "Which hidden folder does git init create, and what does that folder contain?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "It creates .git, which contains the repository's history, branches and settings.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 16,
+        "evidence": "git init     creates one hidden folder,       .git   . That folder is the repository: all history,\nbranches and settings live inside it."
+      }
+    ],
+    "origin": "Day 6 dev q04"
+  },
+  {
+    "id": "D05",
+    "split": "dev",
+    "topic": "staging-separate-commits",
+    "type": "paraphrase",
+    "question": "A developer fixes a bug and starts a feature during the same hour. How does the staging area help keep their commits separate?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "The staging area lets the developer select changes for each snapshot and commit the bug fix and feature as two separate commits.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 18,
+        "evidence": "Why have a staging area at all? Because real work is messy. You may fix a bug and\nstart a new feature in the same hour. Staging lets you commit them as two clean,\nseparate commits."
+      }
+    ],
+    "origin": "Day 6 dev q05"
+  },
+  {
+    "id": "D06",
+    "split": "dev",
+    "topic": "clone-vs-zip",
+    "type": "comparison",
+    "question": "Why does downloading a GitHub ZIP not provide the same repository capabilities as git clone?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "The ZIP has only the files, without history or a GitHub connection, so it cannot be used to push or pull. A clone includes the whole history and configures origin.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 24,
+        "evidence": "git clone      downloads every file and the whole history, and sets up               origin     for you.\nThat's why you don't run        git init     or  git remote add        after cloning.\n\n   ⚠Clone ≠ Download ZIP\n\n   GitHub's Download ZIP button gives you only the files: no history and no\n   connection to GitHub. You can't push or pull from it."
+      }
+    ],
+    "origin": "Day 6 dev q06"
+  },
+  {
+    "id": "D07",
+    "split": "dev",
+    "topic": "rejected-push",
+    "type": "condition",
+    "question": "A teammate pushed first and Git rejects my push. According to the book, what should I do instead of forcing the push?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Run git pull, then git push again; do not force the push.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 25,
+        "evidence": "If a teammate pushed before you, Git refuses your push. Never panic and never\n   force it: run  git pull    , then   git push     again."
+      }
+    ],
+    "origin": "Day 6 dev q07"
+  },
+  {
+    "id": "D08",
+    "split": "dev",
+    "topic": "branch-create-without-switch",
+    "type": "condition",
+    "question": "Does git branch feature-menu also switch the working branch to feature-menu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "No. It creates a branch at the current commit but does not switch to it.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 28,
+        "evidence": "git branch <name>         creates a branch at your current commit, but it does not\n   switch to it."
+      }
+    ],
+    "origin": "Day 6 dev q08"
+  },
+  {
+    "id": "D09",
+    "split": "dev",
+    "topic": "fast-forward-condition",
+    "type": "condition",
+    "question": "When does the example merge fast-forward, and does it create a new commit?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "When main has no new commits of its own, Git moves its label to the feature commit without creating a new commit.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 30,
+        "evidence": "Fast-forward means        main    had no new commits of its own, so Git simply moved the\n main   label forward to Krish's commit. No new commit was needed."
+      }
+    ],
+    "origin": "Day 6 dev q09"
+  },
+  {
+    "id": "D10",
+    "split": "dev",
+    "topic": "resolve-merge-conflict",
+    "type": "procedure",
+    "question": "After deciding the correct contents of a conflicted file, what must I remove and which two Git steps finish the merge?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Remove all three conflict marker lines, stage the resolved file with git add, and finish with git commit.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 33,
+        "evidence": "2. Decide the correct content. Keep one side, the other, or a mix.\n\n3. Delete all three marker lines.\n\n4. Mark it resolved:     git add timing.txt        .\n\n5. Finish the merge:      git commit     ."
+      }
+    ],
+    "origin": "Day 6 dev q10"
+  },
+  {
+    "id": "D11",
+    "split": "dev",
+    "topic": "delete-current-branch",
+    "type": "condition",
+    "question": "In Unit 3, can I delete the branch I am currently standing on, and what must I do first?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "No. Switch away from the current branch before deleting it.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 34,
+        "evidence": "You can't delete the branch you are standing on; switch away first."
+      }
+    ],
+    "origin": "Day 6 dev q11",
+    "filter": {
+      "section": "unit_3"
+    },
+    "filter_reason": "The question explicitly names this Unit; applied unchanged to all methods."
+  },
+  {
+    "id": "D12",
+    "split": "dev",
+    "topic": "stash-tracked-files",
+    "type": "exception",
+    "question": "By default, will git stash save brand-new files that have never been added to Git?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "No. By default it saves changes to tracked files; brand-new files that were never added stay where they are.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 42,
+        "evidence": "By default,    git stash      saves changes to tracked files. Brand-new files you\n   never added stay where they are."
+      }
+    ],
+    "origin": "Day 6 dev q12"
+  },
+  {
+    "id": "D13",
+    "split": "dev",
+    "topic": "diff-after-staging",
+    "type": "paraphrase",
+    "question": "Why can plain git diff show nothing immediately after git add moves my change to the staging area?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "The change has moved to the staging area, so there is no unstaged change for plain git diff to show.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 41,
+        "evidence": "Notice that after    git add    , plain  git diff     shows nothing: the change moved to the\nstaging area."
+      }
+    ],
+    "origin": "Day 6 dev q13"
+  },
+  {
+    "id": "D14",
+    "split": "dev",
+    "topic": "undo-pushed-commit",
+    "type": "condition",
+    "question": "A broken commit has already been pushed and teammates have pulled it. Which undo command preserves the shared history, and how?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Use git revert. It adds a new commit that reverses the old change instead of rewriting the shared history.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 44,
+        "evidence": "Not pushed yet?       reset     is fine: you're only rewriting your own history. Already\n   pushed? Use       revert    . It adds a new commit and never rewrites history your\n   team already has."
+      },
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 46,
+        "evidence": "git revert <commit>         creates a new commit that does the opposite of the old one.\nThe history stays honest: anyone can see the mistake and its fix. Without              --no-edit    ,\nGit opens the editor with a ready-made message."
+      }
+    ],
+    "origin": "Day 6 dev q14"
+  },
+  {
+    "id": "D15",
+    "split": "dev",
+    "topic": "publish-tags",
+    "type": "direct",
+    "question": "In Unit 4, are tags pushed automatically, and which command publishes all local tags?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "No. Push all tags explicitly with git push origin --tags.",
+    "gold": [
+      {
+        "source_id": "sbccas-git-github-student-ed1-2026-10",
+        "page": 43,
+        "evidence": "Tags are not pushed\nautomatically: use      git push origin v1.1        , or  git push origin --tags          for all of\nthem."
+      }
+    ],
+    "origin": "Day 6 dev q15",
+    "filter": {
+      "section": "unit_4"
+    },
+    "filter_reason": "The question explicitly names this Unit; applied unchanged to all methods."
+  },
+  {
+    "id": "D16",
+    "split": "dev",
+    "topic": "maximum-stash-capacity",
+    "type": "unanswerable",
+    "question": "What is the maximum number of saved stash entries that Git allows, according to this book?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Pages 41-42 explain stash commands and give an example list, but do not specify a maximum number of entries.",
+    "absence_check": {
+      "scope": "All 53 indexed physical PDF pages (5-57); appendices are outside the corpus.",
+      "method": "Search the full extracted corpus and read the relevant sections; not a top-k inference.",
+      "terms": [
+        "stash",
+        "maximum",
+        "limit",
+        "capacity"
+      ],
+      "matched_pages": {
+        "stash": [
+          30,
+          37,
+          41,
+          42,
+          47
+        ],
+        "maximum": [],
+        "limit": [],
+        "capacity": []
+      },
+      "inspected_pages": [
+        30,
+        37,
+        41,
+        42,
+        47
+      ]
+    }
+  },
+  {
+    "id": "D17",
+    "split": "dev",
+    "topic": "deleted-branch-retention",
+    "type": "unanswerable",
+    "question": "For exactly how many days does Git retain a deleted branch before it becomes unrecoverable, according to this book?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Branch deletion and undo sections do not specify a retention period in days; a command example or commit hash does not establish one.",
+    "absence_check": {
+      "scope": "All 53 indexed physical PDF pages (5-57); appendices are outside the corpus.",
+      "method": "Search the full extracted corpus and read the relevant sections; not a top-k inference.",
+      "terms": [
+        "delet",
+        "retention",
+        "reflog",
+        "recover",
+        "days"
+      ],
+      "matched_pages": {
+        "delet": [
+          12,
+          16,
+          27,
+          32,
+          33,
+          34,
+          36,
+          42,
+          43,
+          45,
+          46,
+          51,
+          53,
+          54
+        ],
+        "retention": [],
+        "reflog": [],
+        "recover": [
+          13
+        ],
+        "days": [
+          27
+        ]
+      },
+      "inspected_pages": [
+        34,
+        44,
+        45,
+        46,
+        47
+      ]
+    }
+  }
+]
