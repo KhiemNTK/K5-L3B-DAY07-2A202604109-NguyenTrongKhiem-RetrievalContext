@@ -2,7 +2,10 @@
 
 | File | Công dụng |
 |---|---|
-| `agentic.py` | Khung agent ví dụ với số lượt search, top-k và context budget có thể cấu hình |
+| `agentic.py` | Vòng lặp bounded search, chọn context và kiểm tra citation |
+| `controller.py` | Adapter OpenRouter tool calling, validation response và usage |
+| `run_agent.py` | CLI chạy dev hoặc test theo selection đã khóa, lưu trace và lỗi |
+| `experiments.py` | So sánh dev đã chấm nguồn và khóa cấu hình trước test |
 | `baseline.py` | TF-IDF lexical baseline, chạy offline |
 | `convert_day6.py` | Chuyển một số trường JSON từ Day 6 |
 | `agent_metrics.py` | Tổng hợp nhãn đánh giá do bạn tự chấm |
@@ -11,21 +14,50 @@
 | `benchmark.py` | Kiểm tra schema, split, evidence, filter và checksum benchmark |
 | `retrieval.py` | Hybrid RRF và CLI so sánh dense/TF-IDF/hybrid trên dev |
 
-Starter **chưa phải solution hoàn chỉnh**. Checkout này đã nối vector store thật và ba phương pháp retrieval;
-controller dùng model trả lời vẫn chưa được nối. Mock chỉ dùng để test code.
+Checkout đã nối vector store, ba phương pháp retrieval và model trả lời thật.
+Thiết kế và kết quả ở [báo cáo cá nhân](../report/individual/2A202604109_NguyenTrongKhiem.md). Mock chỉ dùng để test code.
 
 Xem [cấu hình và kết quả](../README.md), [thiết lập từ đầu](../docs/README.md).
-`connect_day6(Path(...))` trả `(retriever, verification)`; retriever tương thích `run_agent`,
-nhưng controller dùng model trả lời vẫn chưa được nối. Chỉ filter `section` được hỗ trợ và phải đến từ query/người dùng.
+`connect_day6(Path(...))` trả `(retriever, verification)`, tương thích `run_agent`.
+Chỉ filter `section` được hỗ trợ bởi dense và phải đến từ query/người dùng.
 
 ## 1. Kết nối agent
 
-Trong `agentic.py`, hiện thực:
+`OpenRouterController.decide` gọi model thật và chuẩn hóa thành `search`, `answer` hoặc `abstain`.
+Tool calling theo [giao thức OpenRouter](https://openrouter.ai/docs/guides/features/tool-calling).
+Key lấy từ biến môi trường hoặc `.env`, không ghi vào trace. Model chỉ nhận câu hỏi, lịch sử query và context có nguồn.
+`run_agent.py` nối controller với retriever theo [config/agent.json](../config/agent.json).
 
-- `Controller.decide`: gọi model thật và trả `{action: "search", query: "..."}` hoặc `{action: "answer", answer: "... [chunk-id]", citations: ["chunk-id"]}`.
-- `Retriever.search`: tạo query embedding tương thích Day 6, truy vấn vector store thật và trả chunk theo [định dạng dữ liệu](../data/README.md).
+```powershell
+& $labPython -X utf8 -B starter/run_agent.py --day6-root $day6Root --case D01 --case D16 --case D08
+```
 
-Tự viết chương trình nối hai phần với `run_agent`, hoặc thay thế bằng kiến trúc nhiều tool. Tham số `max_searches`, `top_k` và `budget` chỉ là mặc định của ví dụ, không phải giới hạn của đề. Xem `tests/test_agentic.py` để hiểu cách gọi; kết nối trong test là mock. Khung code kiểm tra citation ID có trong context, nhưng bạn phải tự đọc xem nguồn có hỗ trợ câu trả lời. Báo lỗi kết nối, không thay bằng kết quả giả.
+Trace có raw response, action đã chuẩn hóa, query/tool-call ID, kết quả, context cuối, citation, điều kiện dừng,
+thời gian và usage. Nếu lỗi xảy ra sau retrieval, context và event trước lỗi vẫn được giữ.
+Output bị cắt hoặc tool arguments sai được tính là lỗi; ID citation sai dẫn đến từ chối.
+Usage/cost lấy từ [response của OpenRouter](https://openrouter.ai/docs/cookbook/administration/usage-accounting), không có thì để `null`.
+Các giới hạn trong config là lựa chọn của bài làm, không phải giới hạn bắt buộc của đề.
+
+Thử nghiệm đầy đủ dùng các biến thể đã khai báo trong `config/experiments.json`:
+
+```powershell
+& $labPython -X utf8 -B starter/run_agent.py --day6-root $day6Root --experiment baseline
+& $labPython -X utf8 -B starter/run_agent.py --day6-root $day6Root --experiment compact_context
+& $labPython -X utf8 -B starter/run_agent.py --day6-root $day6Root --experiment two_searches
+```
+
+Đọc nguồn rồi đặt `reviews.json` vào từng thư mục run. Truyền đúng ba thư mục vừa tạo để chọn trên dev:
+
+```powershell
+& $labPython -X utf8 -B starter/experiments.py <baseline-run> <compact-run> <two-searches-run>
+& $labPython -X utf8 -B starter/run_agent.py --day6-root $day6Root --split test --selection <selection.json> --variant baseline
+& $labPython -X utf8 -B starter/run_agent.py --day6-root $day6Root --split test --selection <selection.json> --variant selected
+```
+
+Thay `<...>` bằng đường dẫn được in sau mỗi lệnh. Test không nhận `--case`, `--method`, `--experiment`.
+Dữ liệu, config, trace và mã suy luận được kiểm tra theo selection; không sửa hệ thống theo test rồi dùng lại test cũ.
+Loader đối chiếu config với summary dev đã checksum và cấu hình khai báo. Review/metrics có thể sửa khi đối chiếu nguồn,
+không thay đổi thời điểm hoặc cấu hình đã chọn trong selection.
 
 ## 2. Chạy TF-IDF baseline
 
@@ -67,8 +99,26 @@ python3 starter/agent_metrics.py --cases <cases.json> --traces <traces.json> --r
 
 Thay đường dẫn trong `< >`. Script tổng hợp nhãn bạn đã chấm, không tự đánh giá nội dung. Mẫu số bằng 0 nghĩa là không áp dụng. Lỗi kết nối được báo riêng, không tính vào chất lượng; giữ trace và nhãn để đối chiếu.
 
+Với full run của bài này, thêm `--chunks data/chunks.json` để đo ranking câu hỏi gốc và context cuối.
+Mỗi câu cần `reason`; mỗi câu có đáp án thêm `context_grade` 0–2. Ghi `citation_reasons` theo thứ tự citation,
+`reviewer` và `student_confirmation` ghi người chấm/trạng thái tại thời điểm tạo review.
+Giữ nguyên trace/summary của lượt chạy; ghi lý do nếu sửa nhãn sau khi đối chiếu nguồn. Ghi cả câu lỗi trong review.
+Nếu lỗi sau retrieval, vẫn chấm context đã giữ lại; lỗi trước retrieval không có context được tính mức 0.
+Kết quả mở rộng báo strict pass và grounded mean gồm lỗi bên cạnh các metric rubric trên câu không lỗi.
+
+Có thể chấm lại lượt test đã lưu mà không gọi API:
+
+```powershell
+$testRun = 'results/agent/20261116T043711225775Z-test'
+& $labPython -X utf8 -B starter/agent_metrics.py --chunks data/chunks.json --cases benchmark/test.json --traces "$testRun/traces.json" --reviews "$testRun/reviews.json" --split test --output .codex-log/baseline-test-metrics.json
+```
+
+Unit test tái tính metrics từ review/trace của năm lượt agent, kiểm tra cấu hình, dữ liệu và selection;
+không cần API hoặc database.
+
 ## Lưu ý
 
 TF-IDF dùng cách tách từ đơn giản. `baseline.py` dùng mặc định context budget 800 ký tự, gồm cả nguồn; chunk không vừa bị bỏ. Bạn có thể chọn cách khác. File kết quả cùng tên sẽ bị ghi đè. `starter/data/` và `starter/results/` không được Git theo dõi mặc định; nếu được phép chia sẻ, dùng `git add -f <đường-dẫn>`, hoặc ghi cách tái tạo. Không nộp dữ liệu mật và secret.
 
-Khung agent ưu tiên giữ chunk từ lần search trước. Khi chunk đầu chiếm gần hết budget, lần search sau có thể không thêm được evidence; hãy kiểm tra trace và thử cách chọn context phù hợp trên dev. Citation ID hợp lệ hoặc verifier trả “đúng” không đảm bảo câu trả lời được hỗ trợ; cần chấm thủ công.
+Agent ưu tiên chunk từ lượt search mới; đoạn cũ được giữ nếu còn budget. `dropped_ids` ghi phần bị loại.
+Citation ID hợp lệ chưa chứng minh nguồn hỗ trợ toàn bộ câu trả lời; xem review từng nguồn trước khi chấm.

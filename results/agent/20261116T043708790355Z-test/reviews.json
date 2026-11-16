@@ -1,0 +1,86 @@
+[
+  {
+    "query_id": "T01",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "reason": "Physical page 50 explicitly distinguishes Star as bookmarking/appreciation/popularity and Watch as activity notifications. Answer includes both roles; citation supports every requested distinction.",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 50 explicitly distinguishes Star as bookmarking/appreciation/popularity and Watch as activity notifications. Answer includes both roles; citation supports every requested distinction."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2
+  },
+  {
+    "query_id": "T02",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "reason": "False abstention. Final context has the form introduction on page 50 and generic create/clone/push material (pages 15, 22 and 44), but no README checkbox advice. The full source on page 51 explicitly says yes for clone, no for pushing an existing project. None of the three rewritten searches retrieved that paragraph; context grade 0.",
+    "citation_support": [],
+    "citation_reasons": [],
+    "answer_grade": 0,
+    "context_grade": 0
+  },
+  {
+    "query_id": "T03",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "reason": "Physical page 51 explicitly says everything under Settings is visible only to owners and admins. Answer names both roles and cites this exact passage.",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 51 explicitly says everything under Settings is visible only to owners and admins. Answer names both roles and cites this exact passage."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2
+  },
+  {
+    "query_id": "T04",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "reason": "Physical page 52 lists clear title, reproduction steps, expected versus actual result and screenshots/error messages if possible. Answer preserves all items and optionality. Extra labels/assignment/comments are also in the cited passage, although unnecessary for this question.",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 52 lists clear title, reproduction steps, expected versus actual result and screenshots/error messages if possible. Answer preserves all items and optionality. Extra labels/assignment/comments are also in the cited passage, although unnecessary for this question."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2
+  },
+  {
+    "query_id": "T05",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "reason": "Physical page 55 explicitly gives git pull upstream main or Sync fork on the fork GitHub page. Answer gives both alternatives with the correct upstream/main names.",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 55 explicitly gives git pull upstream main or Sync fork on the fork GitHub page. Answer gives both alternatives with the correct upstream/main names."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2
+  },
+  {
+    "query_id": "T06",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "reason": "Correct refusal after search, with no invented SLA. Independently searched all indexed PDF pages 5-57 for support, ticket, response, service level and SLA: no matches; read Unit 5 source sections. Retrieved general Git/GitHub passages do not establish a guaranteed support response time.",
+    "citation_support": [],
+    "citation_reasons": [],
+    "abstention_correct": true
+  },
+  {
+    "query_id": "T07",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "reason": "Correct refusal after search, with no invented price. Full-PDF corpus search found no Team plan, pricing, monthly or per user; price matches concern the canteen example, not GitHub plans. Final Free-plan setup and team-workflow text establish no Team-plan monthly price.",
+    "citation_support": [],
+    "citation_reasons": [],
+    "abstention_correct": true
+  }
+]

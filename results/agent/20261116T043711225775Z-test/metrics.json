@@ -1,0 +1,366 @@
+{
+  "split": "test",
+  "cases": 7,
+  "provider_errors": 0,
+  "tool_use": {
+    "n": 7,
+    "N": 7
+  },
+  "grounded_answer": {
+    "0": 1,
+    "1": 0,
+    "2": 4,
+    "N": 5,
+    "mean": 1.6
+  },
+  "citation_validity": {
+    "n": 4,
+    "N": 4
+  },
+  "answer_citation_coverage": {
+    "n": 4,
+    "N": 4
+  },
+  "abstention": {
+    "n": 2,
+    "N": 2
+  },
+  "false_abstention": {
+    "n": 1,
+    "N": 5
+  },
+  "strict_pass": {
+    "n": 6,
+    "N": 7,
+    "rate": 0.8571428571428571
+  },
+  "grounded_sum": 8,
+  "grounded_mean_including_errors": 1.6,
+  "hit1": {
+    "n": 3,
+    "N": 5,
+    "rate": 0.6
+  },
+  "hit3": {
+    "n": 4,
+    "N": 5,
+    "rate": 0.8
+  },
+  "context_evidence_rate": {
+    "n": 4,
+    "N": 5,
+    "rate": 0.8
+  },
+  "context_grades": {
+    "0": 1,
+    "1": 0,
+    "2": 4
+  },
+  "original_query_traces": [
+    {
+      "query_id": "T01",
+      "query": "According to the book, how do Star and Watch differ on a GitHub repository?",
+      "filter": null,
+      "results": [
+        {
+          "id": "e1caa734dc54144229d4a832bf5cf4e846ad72f6f4dcb743965e7664fd773991",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 50,
+          "text": "Your profile and finding projects\n\nYour profile page (    github.com/<username>         ) shows your profile README (Lab L-01),\npinned repositories and the contribution graph: the green squares that grow with\nevery commit linked to your email.\n\n  Action                    What it does\n\n  ⭐ Star                    bookmark a project and show appreciation; stars measure\n                            popularity\n\n  👁 Watch                   get notifications about a repository's activity",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_5",
+            "section_title": "Introduction to GitHub",
+            "start_char": 0,
+            "end_char": 486
+          },
+          "score": 0.20002606916908652,
+          "strategy": "tfidf",
+          "rank": 1
+        },
+        {
+          "id": "88dd1d062e528bd503ef05d5c3b5aea1348998c055142176d20ab9cfa8021867",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 56,
+          "text": "Open source etiquette\n\nWell-run projects contain a few standard files:\n\n  File                           Purpose\n\n   README.md                     what the project is, how to install and use it\n\n   LICENSE                       what others may legally do with the code\n\n   CONTRIBUTING.md               how to contribute: branch names, code style, PR rules\n\n   .gitignore                    files Git should not track",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_5",
+            "section_title": "Introduction to GitHub",
+            "start_char": 0,
+            "end_char": 417
+          },
+          "score": 0.19523731289946755,
+          "strategy": "tfidf",
+          "rank": 2
+        },
+        {
+          "id": "07662a880053bdf0dcaa96b456a9fd6fd6c458be74305a940d344a9cad3c5690",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 8,
+          "text": "book the whole class must share: if the library is closed, nobody can study. The server\nis a single point of failure.\n\n3. Distributed VCS. Every developer has a complete copy of the project and its whole\nhistory on their own computer. Examples: Git and Mercurial. Like every student owning\na full photocopy of the book: if one copy is lost, any other copy can replace it.\n\n                                 Local                    Centralized               Distributed (Git)",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_1",
+            "section_title": "Introduction to Version Control",
+            "start_char": 0,
+            "end_char": 474
+          },
+          "score": 0.18873408544187847,
+          "strategy": "tfidf",
+          "rank": 3
+        }
+      ],
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "query_id": "T02",
+      "query": "In the repository creation form, when does the book recommend adding a README, and when should I leave it unchecked?",
+      "filter": null,
+      "results": [
+        {
+          "id": "07662a880053bdf0dcaa96b456a9fd6fd6c458be74305a940d344a9cad3c5690",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 8,
+          "text": "book the whole class must share: if the library is closed, nobody can study. The server\nis a single point of failure.\n\n3. Distributed VCS. Every developer has a complete copy of the project and its whole\nhistory on their own computer. Examples: Git and Mercurial. Like every student owning\na full photocopy of the book: if one copy is lost, any other copy can replace it.\n\n                                 Local                    Centralized               Distributed (Git)",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_1",
+            "section_title": "Introduction to Version Control",
+            "start_char": 0,
+            "end_char": 474
+          },
+          "score": 0.1471494518561934,
+          "strategy": "tfidf",
+          "rank": 1
+        },
+        {
+          "id": "cea5ec33cd2ec336def24ed8d5ccc5011a57f069ce309f5491e3b93c21774442",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 13,
+          "text": "   Create a repository named exactly the same as your username (for example\n    krish-patel/krish-patel         ) and tick Add a README file. Whatever you write in\n   that README appears on your GitHub profile page, like a business card. The full\n   steps are on the Labs page.\n\nUnit 1 summary\n\n   A version control system records every change: what, who, when and why.\n\n   Local VCS keeps history on one machine; centralized VCS on one server;\n   distributed VCS (Git) on every computer.",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_1",
+            "section_title": "Introduction to Version Control",
+            "start_char": 425,
+            "end_char": 913
+          },
+          "score": 0.13818169643306916,
+          "strategy": "tfidf",
+          "rank": 2
+        },
+        {
+          "id": "87ca25ceb4eb3d0242d178106ec344985c634537718ba316dea3b95738fe8646",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 50,
+          "text": "  ⑂ Fork                    make your own copy of someone else's repository (below)\n\n  🔍 Search /                find projects by topic, language or name\n  Explore\n\n   💡Your portfolio\n\n   Recruiters look at GitHub profiles. Pin your best three repositories, give each a\n   clear README, and commit regularly. Steady green squares tell a story.\n\nCreating a repository on GitHub\n\nClick + → New repository. The form asks for:",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_5",
+            "section_title": "Introduction to GitHub",
+            "start_char": 488,
+            "end_char": 910
+          },
+          "score": 0.1368367143255821,
+          "strategy": "tfidf",
+          "rank": 3
+        }
+      ],
+      "hit1": false,
+      "hit3": false
+    },
+    {
+      "query_id": "T03",
+      "query": "According to the book, which repository roles can see everything under Settings?",
+      "filter": null,
+      "results": [
+        {
+          "id": "8844cb9823704865ad477083778bb1205d91564433ac87b7773960fc6587397e",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 51,
+          "text": "  License                   for open source, e.g. MIT; without one, others may not legally reuse\n                            your code\n\nYou can also create a file directly on GitHub (Add file → Create new file) and commit it\nin the browser. That creates a real commit, which you then                 git pull      to your\ncomputer.\n\nManaging a repository\n\nEverything under Settings is visible only to owners and admins:\n\n  Setting                                Use",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_5",
+            "section_title": "Introduction to GitHub",
+            "start_char": 457,
+            "end_char": 922
+          },
+          "score": 0.28320841813528064,
+          "strategy": "tfidf",
+          "rank": 1
+        },
+        {
+          "id": "07662a880053bdf0dcaa96b456a9fd6fd6c458be74305a940d344a9cad3c5690",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 8,
+          "text": "book the whole class must share: if the library is closed, nobody can study. The server\nis a single point of failure.\n\n3. Distributed VCS. Every developer has a complete copy of the project and its whole\nhistory on their own computer. Examples: Git and Mercurial. Like every student owning\na full photocopy of the book: if one copy is lost, any other copy can replace it.\n\n                                 Local                    Centralized               Distributed (Git)",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_1",
+            "section_title": "Introduction to Version Control",
+            "start_char": 0,
+            "end_char": 474
+          },
+          "score": 0.19294283768254428,
+          "strategy": "tfidf",
+          "rank": 2
+        },
+        {
+          "id": "e42116836fb4db33ca3337a2593428e05be7c3fcd6e099fcc78f5fbb3dba8884",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 16,
+          "text": "                          Local repository                       Remote repository\n\n  Lives on                your computer (the     .git            a server such as GitHub\n                          folder)\n\n  Needs internet?         No                                     Yes, to sync\n\n  Who can see it?         only you                               your team, or the whole world if\n                                                                 public",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_2",
+            "section_title": "Getting Started with Git",
+            "start_char": 0,
+            "end_char": 456
+          },
+          "score": 0.17604093811325122,
+          "strategy": "tfidf",
+          "rank": 3
+        }
+      ],
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "query_id": "T04",
+      "query": "What information should a good GitHub issue contain, including optional supporting material?",
+      "filter": null,
+      "results": [
+        {
+          "id": "88dd1d062e528bd503ef05d5c3b5aea1348998c055142176d20ab9cfa8021867",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 56,
+          "text": "Open source etiquette\n\nWell-run projects contain a few standard files:\n\n  File                           Purpose\n\n   README.md                     what the project is, how to install and use it\n\n   LICENSE                       what others may legally do with the code\n\n   CONTRIBUTING.md               how to contribute: branch names, code style, PR rules\n\n   .gitignore                    files Git should not track",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_5",
+            "section_title": "Introduction to GitHub",
+            "start_char": 0,
+            "end_char": 417
+          },
+          "score": 0.1950237940028011,
+          "strategy": "tfidf",
+          "rank": 1
+        },
+        {
+          "id": "fcf102cbaaa71070c5ddf0668034e3bb3a6876747212c2c7d68787a72fa5e808",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 52,
+          "text": "Releases turn a tag (Unit 4) into a downloadable version with notes: Releases → Draft a\nnew release → choose tag        v1.0  .\n\nIssues: tracking work\n\nAn issue is a discussion about one task: a bug, a feature request, a question. Every\nissue gets a number (     #3 ).\n\n   🍽Mr. Desai reports a bug\n\n   Title: Cart total wrong when the same item is added twice Body: Steps: 1) add\n   Samosa, 2) add Samosa again, 3) open cart. Expected ₹30, shows ₹15. Phone:\n   Android, Chrome.\n\nA good issue has:",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_5",
+            "section_title": "Introduction to GitHub",
+            "start_char": 0,
+            "end_char": 496
+          },
+          "score": 0.17983449852155295,
+          "strategy": "tfidf",
+          "rank": 2
+        },
+        {
+          "id": "d655896658dda93400450b998dd94f2cd651798868317e229aafd0151813f41f",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 52,
+          "text": "   a clear title that names the problem,\n\n   steps to reproduce, expected vs actual result,\n\n   screenshots or error messages if possible.\n\nThen the team:\n\n   adds labels (   bug  ,  enhancement     , good first issue       ),\n\n   assigns someone,\n\n   discusses in comments (Markdown works; mention people with                  @username    ).\n\nClose an issue from a commit by writing a keyword and the number in the message:\n\n          Git Bash",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_5",
+            "section_title": "Introduction to GitHub",
+            "start_char": 498,
+            "end_char": 943
+          },
+          "score": 0.15432639613863391,
+          "strategy": "tfidf",
+          "rank": 3
+        }
+      ],
+      "hit1": false,
+      "hit3": true
+    },
+    {
+      "query_id": "T05",
+      "query": "After contributing from a fork, how can I get new commits from the original repository into my fork, according to the book?",
+      "filter": null,
+      "results": [
+        {
+          "id": "a572f3eea959c6af601586b6cac55524f956ee4d990aeda946463c6d24bdf207",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 55,
+          "text": "Then open the pull request from your fork to the original. Later, to get the original's new\ncommits:     git pull upstream main           , or press Sync fork on your fork's GitHub page.",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_5",
+            "section_title": "Introduction to GitHub",
+            "start_char": 1617,
+            "end_char": 1803
+          },
+          "score": 0.4790588563362601,
+          "strategy": "tfidf",
+          "rank": 1
+        },
+        {
+          "id": "b5accd129e0b62742ead7b1a70bfd07e9113962c668ec5a59f5db8c61f974667",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 55,
+          "text": "                                            Original repository\n                                        sbccas/git-practice-2026\n                                        \"upstream\": you can't push here\n\n                           1 Fork (button on GitHub) →         ← 7 Pull request\n\n                                                 Your fork\n                                     krish-patel/git-practice-2026\n                                         \"origin\": your copy on GitHub",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_5",
+            "section_title": "Introduction to GitHub",
+            "start_char": 0,
+            "end_char": 479
+          },
+          "score": 0.2364618015413408,
+          "strategy": "tfidf",
+          "rank": 2
+        },
+        {
+          "id": "c373e72473db4bdb5fede2897567a3ee8822c9aac06469a430d2bb364f8e789d",
+          "source_id": "sbccas-git-github-student-ed1-2026-10",
+          "source": "data/git-github-fundamentals-student-edition.pdf",
+          "page": 57,
+          "text": "   Fork = your copy on GitHub; contribute with fork → clone → branch → commit →\n   push → PR;      upstream     points to the original.\n\nPractise with Labs L-01 – L-04, then take the Unit 5 quiz and the final Self-check.",
+          "metadata": {
+            "extraction_status": "ok",
+            "section": "unit_5",
+            "section_title": "Introduction to GitHub",
+            "start_char": 1377,
+            "end_char": 1597
+          },
+          "score": 0.2199950198158506,
+          "strategy": "tfidf",
+          "rank": 3
+        }
+      ],
+      "hit1": true,
+      "hit3": true
+    }
+  ],
+  "search_call_distribution": {
+    "1": 4,
+    "3": 3
+  },
+  "median_ms": 9741.379099999904
+}

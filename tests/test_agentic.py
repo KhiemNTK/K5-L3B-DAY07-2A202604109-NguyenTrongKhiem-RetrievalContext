@@ -51,10 +51,12 @@ class AgentTests(unittest.TestCase):
                 if history:
                     assert len(history) == 1 and len(history[0]['context']) <= 90
                 if self.i <= 2: return {'action': 'search', 'query': str(self.i)}
-                return {'action': 'answer', 'answer': '7 ngày [c1]', 'citations': ['c1']}
+                return {'action': 'answer', 'answer': 'Một đoạn bằng chứng khác. [c2]', 'citations': ['c2']}
         result = run_agent('q', InspectController(), SequentialRetriever(), budget=90)
         self.assertEqual(result['status'], 'answered')
         self.assertTrue(all(len(e['context']) <= 90 for e in result['events'] if e['event'] == 'search'))
+        self.assertEqual(result['context_ids'], ['c2'])
+        self.assertEqual(result['events'][1]['dropped_ids'], ['c1'])
 
     def test_configurable_retrieval_allows_more_than_two_calls(self):
         c = Controller([{'action': 'search', 'query': str(i)} for i in range(3)] +
@@ -70,5 +72,49 @@ class AgentTests(unittest.TestCase):
             def search(self, query, *, filters, top_k): raise ConnectionError('database unavailable')
         with self.assertRaises(ConnectionError):
             run_agent('q', Controller([{'action':'search','query':'q'}]), Broken())
+
+    def test_unknown_unlisted_markers_and_duplicate_citations_are_rejected(self):
+        for answer, citations in [('7 days [c1] [fake]', ['c1']), ('7 days [c1]', ['c1', 'c1'])]:
+            controller = Controller([{'action': 'search', 'query': 'q'},
+                {'action': 'answer', 'answer': answer, 'citations': citations}])
+            result = run_agent('q', controller, Retriever([CHUNK]))
+            self.assertEqual(result['status'], 'abstain')
+            self.assertEqual(result['stop_reason'], 'invalid_or_missing_citations')
+
+    def test_model_abstention_does_not_publish_speculation(self):
+        controller = Controller([{'action': 'search', 'query': 'q'},
+            {'action': 'abstain', 'answer': 'Insufficient evidence, but probably 128 entries.'}])
+        result = run_agent('q', controller, Retriever([CHUNK]))
+        self.assertEqual(result['status'], 'abstain')
+        self.assertEqual(result['stop_reason'], 'model_abstain')
+        self.assertNotIn('128', result['answer'])
+
+    def test_partial_context_survives_a_later_model_error(self):
+        class FailingController:
+            def decide(self, question, history):
+                if history:
+                    raise TimeoutError('timeout')
+                return {'action': 'search', 'query': 'q'}
+        partial = {}
+        with self.assertRaises(TimeoutError):
+            run_agent('q', FailingController(), Retriever([CHUNK]), trace=partial)
+        self.assertEqual(partial['context_ids'], ['c1'])
+        self.assertEqual(partial['events'][0]['status'], 'ok')
+
+    def test_failed_retrieval_keeps_its_arguments(self):
+        class Broken:
+            def search(self, query, *, filters, top_k):
+                raise ConnectionError('password=secret')
+        partial = {}
+        with self.assertRaises(ConnectionError):
+            run_agent('q', Controller([{'action': 'search', 'query': 'specific q'}]), Broken(), trace=partial)
+        self.assertEqual(partial['events'][0]['query'], 'specific q')
+        self.assertEqual(partial['events'][0]['status'], 'error')
+        self.assertNotIn('secret', str(partial))
+
+    def test_invalid_limits_are_rejected(self):
+        for config in [{'max_searches': True}, {'top_k': 0}, {'budget': -1}]:
+            with self.assertRaises(ValueError):
+                run_agent('q', Controller([]), Retriever([]), **config)
 
 if __name__ == '__main__': unittest.main()

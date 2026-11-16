@@ -76,6 +76,10 @@ class BenchmarkTests(unittest.TestCase):
 
     def test_source_checked_fast_forward_alternative_is_not_a_false_negative(self):
         from baseline import hit
+        plan = json.loads((benchmark.ROOT / 'benchmark/plan.json').read_text(encoding='utf-8'))
+        correction = plan['dev_gold_corrections'][0]
+        self.assertEqual(digest(benchmark.ROOT / correction['previous_run_inputs'] / 'dev.json'),
+                         correction['previous_dev_sha256'])
         case = next(c for c in benchmark.load_cases('dev') if c['id'] == 'D09')
         chunks = json.loads((benchmark.ROOT / 'data/chunks.json').read_text(encoding='utf-8'))
         panel = next(c for c in chunks if c['page'] == 31 and c['id'].startswith('54c842f61562'))

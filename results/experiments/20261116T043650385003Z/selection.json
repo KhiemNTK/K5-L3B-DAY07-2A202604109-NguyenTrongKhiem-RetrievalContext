@@ -1,0 +1,318 @@
+{
+  "frozen_at_utc": "2026-11-16T04:36:50.384474+00:00",
+  "selected_on": "dev",
+  "selected_experiment": "baseline",
+  "selection_order": [
+    "highest strict pass count over all 17 dev cases; errors count as failures",
+    "highest grounded answer sum; answerable errors count as zero",
+    "highest supported citation ratio",
+    "highest final context evidence count",
+    "lowest reported API cost; unknown costs rank last",
+    "lowest median question latency",
+    "experiment ID in lexical order"
+  ],
+  "baseline_config": {
+    "model": "openai/gpt-4o-mini",
+    "retrieval": "tfidf",
+    "max_searches": 3,
+    "top_k": 3,
+    "context_budget_chars": 2400,
+    "max_output_tokens": 700,
+    "timeout_seconds": 45
+  },
+  "selected_config": {
+    "model": "openai/gpt-4o-mini",
+    "retrieval": "tfidf",
+    "max_searches": 3,
+    "top_k": 3,
+    "context_budget_chars": 2400,
+    "max_output_tokens": 700,
+    "timeout_seconds": 45
+  },
+  "benchmark_sha256": {
+    "data/chunks.json": "59453c0c998b6319de31baf68d4aa72b8482179dc2f8fd0fd422bb07f2458627",
+    "data/day6.json": "7c29fb095cafe7c1e8115e69880c716a1a9d68c80888e67ebac84b3a8b4fb33c",
+    "benchmark/plan.json": "e3393af1d472bad020c9852a1fe1409c8f33ac9d6d09036cb73230f51ceb1f3f",
+    "benchmark/dev.json": "c4282b184a70f08cd34ae1bafa59774b60e78121ed7c9bdf0809bea734adc697",
+    "benchmark/test.json": "d0e18526650c3e764a98cabf637259487aac3e35791c957a6678e85601f2920e"
+  },
+  "code_sha256": {
+    "agentic.py": "770963bb00418a0336fc35f430a1949e7feee81a2191b2bd600947e9996dbbbf",
+    "controller.py": "ed651afd0dda7973f807b556fdb9fa56607668cb75cb16676affafaa664db35f",
+    "run_agent.py": "3ac33fac6e3ae4e6b264abe246827fdbfff8711f634525ce97f978d364a04f84",
+    "baseline.py": "6639a97f17d44495b4861b4d719acd68555a423824a3f7dcdbdebf4ed789de19",
+    "retrieval.py": "f72a634173a7d7520c60f06fc9bbafd760f35e864d15b1391bdbb8ee7a0e63c7",
+    "day6.py": "5feac1675881f920135c8e6f93569382e1a3847a4b4f3d2f414bfa74a10bbb99",
+    "benchmark.py": "1f2c2c05ee54dff1c8397cd8d85a7dac42965f07682152dfb2a8ae5ddbea446a",
+    "agent_metrics.py": "9b0065fd6c06bc05caa03569904177c4cb210514cef6e360a45910aa52cb8391",
+    "experiments.py": "1a581d56ea23506c7eaf6003537e4ffea8603b3c0bfa6c7c26b703ee68c94efd"
+  },
+  "proof_sha256": {
+    "config/agent.json": "d6d692495476b12def800302f839883987819d20e69c0cfe4e34361028bbff46",
+    "config/experiments.json": "be9f0843161803c4019e334d2e215624ab4bf612210adcdd3b027ded5708fc44",
+    "results/agent/20261116T042530099605Z-dev/summary.json": "cacd7b5bd76e07a677092fbae0717203cd8441a9fdff4528eda21f1f305c35e2",
+    "results/agent/20261116T042530099605Z-dev/traces.json": "2a38aac3c005fbfdaf0acae2b2648ea92ef6608077f456a31d5d007b40223726",
+    "results/agent/20261116T042530099605Z-dev/reviews.json": "e65e42161868e22c2b2e4cccf1a9fb012f55226fc6181a034744183ba2590e2f",
+    "results/agent/20261116T042530099605Z-dev/metrics.json": "633d0766a83b239c6fb005cdea50cd2d2d25beea64d76b23090566aaf7a4cbe6",
+    "results/agent/20261116T042753175840Z-dev/summary.json": "f604a144a9cb2ff3a3e14ec60a386e14a1c0c39f9d2d9525e1c30976e2215a3a",
+    "results/agent/20261116T042753175840Z-dev/traces.json": "215818676c5d48454a16389869c29e7c462a22c78d5f1e5f843f8d0fa584150f",
+    "results/agent/20261116T042753175840Z-dev/reviews.json": "37e5b148bbda41bcc0d1637d8b898713c9f4eaf169c67aec1b38d7e7f22e6ac4",
+    "results/agent/20261116T042753175840Z-dev/metrics.json": "e7e44a3ed2be06af9eb9ba7adbacb1819e2ed87a8200c3533724f4bbff81e990",
+    "results/agent/20261116T042806131267Z-dev/summary.json": "903292f1d1ef48e2bd238eb28a33e3bdfebe714329a990b77d4833fb282e638f",
+    "results/agent/20261116T042806131267Z-dev/traces.json": "36ad7f1a77ea83ae5392b09f85ccb9c90f47b325d5d4fdcd1b3c29bd29e4153a",
+    "results/agent/20261116T042806131267Z-dev/reviews.json": "5f9a9cab9319ab79f6f6a8f5b60fb29536cbd4318ca6e04f8ae6a71438581f38",
+    "results/agent/20261116T042806131267Z-dev/metrics.json": "9396bb64b26a10425fb442568dbed52ff0dd4ca6716b8739e5969f76e4602a29"
+  },
+  "dev_comparison": [
+    {
+      "experiment": "baseline",
+      "run": "results/agent/20261116T042530099605Z-dev",
+      "config": {
+        "model": "openai/gpt-4o-mini",
+        "retrieval": "tfidf",
+        "max_searches": 3,
+        "top_k": 3,
+        "context_budget_chars": 2400,
+        "max_output_tokens": 700,
+        "timeout_seconds": 45
+      },
+      "metrics": {
+        "cases": 17,
+        "provider_errors": 1,
+        "tool_use": {
+          "n": 16,
+          "N": 16
+        },
+        "grounded_answer": {
+          "0": 0,
+          "1": 1,
+          "2": 13,
+          "N": 14,
+          "mean": 1.9285714285714286
+        },
+        "citation_validity": {
+          "n": 14,
+          "N": 15
+        },
+        "answer_citation_coverage": {
+          "n": 14,
+          "N": 14
+        },
+        "abstention": {
+          "n": 2,
+          "N": 2
+        },
+        "false_abstention": {
+          "n": 0,
+          "N": 14
+        },
+        "strict_pass": {
+          "n": 15,
+          "N": 17,
+          "rate": 0.8823529411764706
+        },
+        "grounded_sum": 27,
+        "grounded_mean_including_errors": 1.8,
+        "hit1": {
+          "n": 13,
+          "N": 15,
+          "rate": 0.8666666666666667
+        },
+        "hit3": {
+          "n": 15,
+          "N": 15,
+          "rate": 1.0
+        },
+        "context_evidence_rate": {
+          "n": 14,
+          "N": 15,
+          "rate": 0.9333333333333333
+        },
+        "context_grades": {
+          "0": 1,
+          "1": 0,
+          "2": 14
+        },
+        "search_call_distribution": {
+          "2": 3,
+          "3": 3,
+          "1": 11
+        },
+        "median_ms": 26369.559200000367
+      },
+      "usage": {
+        "model_calls": 40,
+        "total_tokens": null,
+        "service_cost_usd": null,
+        "reported_cost_usd": 0.00521175
+      }
+    },
+    {
+      "experiment": "compact_context",
+      "run": "results/agent/20261116T042753175840Z-dev",
+      "config": {
+        "model": "openai/gpt-4o-mini",
+        "retrieval": "tfidf",
+        "max_searches": 3,
+        "top_k": 3,
+        "context_budget_chars": 800,
+        "max_output_tokens": 700,
+        "timeout_seconds": 45
+      },
+      "metrics": {
+        "cases": 17,
+        "provider_errors": 1,
+        "tool_use": {
+          "n": 16,
+          "N": 16
+        },
+        "grounded_answer": {
+          "0": 3,
+          "1": 1,
+          "2": 11,
+          "N": 15,
+          "mean": 1.5333333333333334
+        },
+        "citation_validity": {
+          "n": 11,
+          "N": 12
+        },
+        "answer_citation_coverage": {
+          "n": 12,
+          "N": 12
+        },
+        "abstention": {
+          "n": 1,
+          "N": 1
+        },
+        "false_abstention": {
+          "n": 3,
+          "N": 15
+        },
+        "strict_pass": {
+          "n": 12,
+          "N": 17,
+          "rate": 0.7058823529411765
+        },
+        "grounded_sum": 23,
+        "grounded_mean_including_errors": 1.5333333333333334,
+        "hit1": {
+          "n": 13,
+          "N": 15,
+          "rate": 0.8666666666666667
+        },
+        "hit3": {
+          "n": 15,
+          "N": 15,
+          "rate": 1.0
+        },
+        "context_evidence_rate": {
+          "n": 11,
+          "N": 15,
+          "rate": 0.7333333333333333
+        },
+        "context_grades": {
+          "0": 1,
+          "1": 3,
+          "2": 11
+        },
+        "search_call_distribution": {
+          "2": 3,
+          "3": 3,
+          "1": 10,
+          "0": 1
+        },
+        "median_ms": 31106.830000004265
+      },
+      "usage": {
+        "model_calls": 39,
+        "total_tokens": null,
+        "service_cost_usd": null,
+        "reported_cost_usd": 0.0037779
+      }
+    },
+    {
+      "experiment": "two_searches",
+      "run": "results/agent/20261116T042806131267Z-dev",
+      "config": {
+        "model": "openai/gpt-4o-mini",
+        "retrieval": "tfidf",
+        "max_searches": 2,
+        "top_k": 3,
+        "context_budget_chars": 2400,
+        "max_output_tokens": 700,
+        "timeout_seconds": 45
+      },
+      "metrics": {
+        "cases": 17,
+        "provider_errors": 2,
+        "tool_use": {
+          "n": 15,
+          "N": 15
+        },
+        "grounded_answer": {
+          "0": 0,
+          "1": 1,
+          "2": 12,
+          "N": 13,
+          "mean": 1.9230769230769231
+        },
+        "citation_validity": {
+          "n": 14,
+          "N": 15
+        },
+        "answer_citation_coverage": {
+          "n": 13,
+          "N": 13
+        },
+        "abstention": {
+          "n": 2,
+          "N": 2
+        },
+        "false_abstention": {
+          "n": 0,
+          "N": 13
+        },
+        "strict_pass": {
+          "n": 14,
+          "N": 17,
+          "rate": 0.8235294117647058
+        },
+        "grounded_sum": 25,
+        "grounded_mean_including_errors": 1.6666666666666667,
+        "hit1": {
+          "n": 13,
+          "N": 15,
+          "rate": 0.8666666666666667
+        },
+        "hit3": {
+          "n": 15,
+          "N": 15,
+          "rate": 1.0
+        },
+        "context_evidence_rate": {
+          "n": 13,
+          "N": 15,
+          "rate": 0.8666666666666667
+        },
+        "context_grades": {
+          "0": 2,
+          "1": 0,
+          "2": 13
+        },
+        "search_call_distribution": {
+          "0": 2,
+          "1": 10,
+          "2": 5
+        },
+        "median_ms": 26979.405199999746
+      },
+      "usage": {
+        "model_calls": 35,
+        "total_tokens": null,
+        "service_cost_usd": null,
+        "reported_cost_usd": 0.00445125
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "split": "dev",
+  "experiment": "baseline",
+  "variant": null,
+  "config": {
+    "model": "openai/gpt-4o-mini",
+    "retrieval": "tfidf",
+    "max_searches": 3,
+    "top_k": 3,
+    "context_budget_chars": 2400,
+    "max_output_tokens": 700,
+    "timeout_seconds": 45
+  },
+  "context_policy": "latest_search_first_then_previous; deduplicate_by_id; whole_chunks",
+  "case_ids": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17"
+  ],
+  "input_sha256": {
+    "data/chunks.json": "59453c0c998b6319de31baf68d4aa72b8482179dc2f8fd0fd422bb07f2458627",
+    "data/day6.json": "7c29fb095cafe7c1e8115e69880c716a1a9d68c80888e67ebac84b3a8b4fb33c",
+    "benchmark/plan.json": "e3393af1d472bad020c9852a1fe1409c8f33ac9d6d09036cb73230f51ceb1f3f",
+    "benchmark/dev.json": "c4282b184a70f08cd34ae1bafa59774b60e78121ed7c9bdf0809bea734adc697"
+  },
+  "agent_config_sha256": "d6d692495476b12def800302f839883987819d20e69c0cfe4e34361028bbff46",
+  "experiments_sha256": "be9f0843161803c4019e334d2e215624ab4bf612210adcdd3b027ded5708fc44",
+  "code_sha256": {
+    "agentic.py": "770963bb00418a0336fc35f430a1949e7feee81a2191b2bd600947e9996dbbbf",
+    "controller.py": "ed651afd0dda7973f807b556fdb9fa56607668cb75cb16676affafaa664db35f",
+    "run_agent.py": "3ac33fac6e3ae4e6b264abe246827fdbfff8711f634525ce97f978d364a04f84",
+    "baseline.py": "6639a97f17d44495b4861b4d719acd68555a423824a3f7dcdbdebf4ed789de19",
+    "retrieval.py": "f72a634173a7d7520c60f06fc9bbafd760f35e864d15b1391bdbb8ee7a0e63c7",
+    "day6.py": "5feac1675881f920135c8e6f93569382e1a3847a4b4f3d2f414bfa74a10bbb99",
+    "benchmark.py": "1f2c2c05ee54dff1c8397cd8d85a7dac42965f07682152dfb2a8ae5ddbea446a",
+    "agent_metrics.py": "9b0065fd6c06bc05caa03569904177c4cb210514cef6e360a45910aa52cb8391",
+    "experiments.py": "1a581d56ea23506c7eaf6003537e4ffea8603b3c0bfa6c7c26b703ee68c94efd"
+  },
+  "setup_seconds": 0.022631399995589163,
+  "status": "error",
+  "outcomes": {
+    "answered": 2,
+    "abstain": 1,
+    "error": 14
+  },
+  "usage": {
+    "model_calls": 22,
+    "total_tokens": null,
+    "service_cost_usd": null,
+    "reported_cost_usd": 0.0011013
+  }
+}

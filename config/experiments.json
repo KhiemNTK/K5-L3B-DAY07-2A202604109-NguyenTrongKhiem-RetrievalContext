@@ -1,0 +1,30 @@
+{
+  "experiments": {
+    "baseline": {
+      "overrides": {},
+      "hypothesis": "Reference: the initial TF-IDF agent with 2400 context characters and three searches."
+    },
+    "compact_context": {
+      "overrides": {"context_budget_chars": 800},
+      "hypothesis": "Less context may reduce irrelevant citations and prompt tokens. It may also remove required evidence.",
+      "motivation": "The dense D01 smoke cited an unrelated page 7 diagram."
+    },
+    "two_searches": {
+      "overrides": {"max_searches": 2},
+      "hypothesis": "Two searches may preserve answer quality while reducing repeated searches and API cost.",
+      "motivation": "D16 used three similar queries and returned the same stash passages before abstaining."
+    }
+  },
+  "selection_order": [
+    "highest strict pass count over all 17 dev cases; errors count as failures",
+    "highest grounded answer sum; answerable errors count as zero",
+    "highest supported citation ratio",
+    "highest final context evidence count",
+    "lowest reported API cost; unknown costs rank last",
+    "lowest median question latency",
+    "experiment ID in lexical order"
+  ],
+  "strict_pass": "Answerable: grade 2, context grade 2, answered, non-empty citations and all citations supported. Unanswerable: reviewed correct abstention. Errors fail.",
+  "reviewer": "Codex (AI assistant); student confirmation pending",
+  "test_policy": "Freeze baseline, selected configuration, source code and inputs after complete dev review; then run both variants on all seven test cases. Do not tune on test."
+}

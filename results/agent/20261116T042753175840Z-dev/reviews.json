@@ -1,0 +1,218 @@
+[
+  {
+    "query_id": "D01",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 6: Page 6 states file changes over time, authorship and restoring an earlier version; the answer includes all requested points."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "Page 6 states file changes over time, authorship and restoring an earlier version; the answer includes all requested points."
+  },
+  {
+    "query_id": "D02",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [],
+    "citation_reasons": [],
+    "answer_grade": 0,
+    "context_grade": 1,
+    "reason": "False abstention after three rewritten queries. Final pages 6-7 contain a general VCS definition and full-copy diagram, but not the page 8 complete-history and recovery explanation. Partial evidence only."
+  },
+  {
+    "query_id": "D03",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 11: Page 11 explicitly requires omitting --global inside the own project folder on a shared PC; both conditions are preserved."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "Page 11 explicitly requires omitting --global inside the own project folder on a shared PC; both conditions are preserved."
+  },
+  {
+    "query_id": "D04",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 16: Page 16 identifies the hidden .git directory created by git init and its history, branches and settings."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "Page 16 identifies the hidden .git directory created by git init and its history, branches and settings."
+  },
+  {
+    "query_id": "D05",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 18: Page 18 explains selecting ready changes and using staging to separate the bug fix and new feature into clean commits."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "Page 18 explains selecting ready changes and using staging to separate the bug fix and new feature into clean commits."
+  },
+  {
+    "query_id": "D06",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 24: Page 24 contrasts ZIP files without history/connection or push/pull with clone including full history and origin."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "Page 24 contrasts ZIP files without history/connection or push/pull with clone including full history and origin."
+  },
+  {
+    "query_id": "D07",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 25: Page 25 explicitly gives git pull then git push and says not to force a rejected push."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "Page 25 explicitly gives git pull then git push and says not to force a rejected push."
+  },
+  {
+    "query_id": "D08",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 28: Page 28 explicitly says git branch creates a branch but does not switch. The concise answer repeats that condition without unsupported extra instructions."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "Page 28 explicitly says git branch creates a branch but does not switch. The concise answer repeats that condition without unsupported extra instructions."
+  },
+  {
+    "query_id": "D09",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 31: The answer correctly says main has no new commits and no merge commit is created. This is explicit in the upper-left fast-forward panel on physical page 31, checked on the rendered PDF despite interleaved text extraction."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "The answer correctly says main has no new commits and no merge commit is created. This is explicit in the upper-left fast-forward panel on physical page 31, checked on the rendered PDF despite interleaved text extraction."
+  },
+  {
+    "query_id": "D10",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [],
+    "citation_reasons": [],
+    "answer_grade": 0,
+    "context_grade": 1,
+    "reason": "False abstention. Final page 32 mentions resolving/staging/commit but lacks the page 33 requirement to remove all three marker lines. That complete paragraph was retrieved but excluded by the 800-character budget."
+  },
+  {
+    "query_id": "D11",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [],
+    "citation_reasons": [],
+    "answer_grade": 0,
+    "context_grade": 0,
+    "reason": "False abstention. The final page 28 paragraph describes branch creation, not the current-branch deletion restriction on page 34. The needed page 34 chunk was retrieved but dropped by the 800-character budget."
+  },
+  {
+    "query_id": "D12",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 42: Page 42 explicitly limits default stash to tracked changes and leaves never-added files in place."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "Page 42 explicitly limits default stash to tracked changes and leaves never-added files in place."
+  },
+  {
+    "query_id": "D13",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 41: Page 41 says the change moved to staging and plain diff compares working directory with staging; this explains no unstaged output."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "Page 41 says the change moved to staging and plain diff compares working directory with staging; this explains no unstaged output."
+  },
+  {
+    "query_id": "D14",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      false
+    ],
+    "citation_reasons": [
+      "Page 46 supports choosing revert but does not state the inverse-commit mechanism asserted by the answer; final context is insufficient."
+    ],
+    "answer_grade": 1,
+    "context_grade": 1,
+    "reason": "Page 46 in the final context names revert for a pushed broken commit, but does not yet say it adds an inverse commit without rewriting history. The answer supplies that mechanism without the page 44 or next page 46 paragraph, which were dropped. Correct command, incomplete grounding."
+  },
+  {
+    "query_id": "D15",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [
+      true
+    ],
+    "citation_reasons": [
+      "Physical page 43: Page 43 explicitly says tags are not pushed automatically and names git push origin --tags for all tags."
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "Page 43 explicitly says tags are not pushed automatically and names git push origin --tags for all tags."
+  },
+  {
+    "query_id": "D16",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [],
+    "citation_reasons": [],
+    "abstention_correct": false,
+    "reason": "Network failure on the first model request, before search or final response; this is a run error, not a correct refusal."
+  },
+  {
+    "query_id": "D17",
+    "reviewer": "Codex (AI assistant)",
+    "student_confirmation": "pending",
+    "citation_support": [],
+    "citation_reasons": [],
+    "abstention_correct": true,
+    "reason": "Correct abstention after three searches. Final page 28 covers branches but gives no retention days. The benchmark full-corpus absence review independently confirms the number is absent; the answer makes no unsupported retention claim."
+  }
+]

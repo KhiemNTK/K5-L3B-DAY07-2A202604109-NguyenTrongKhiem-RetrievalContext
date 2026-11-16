@@ -59,3 +59,12 @@ Database phải khớp ID, text, nguồn, trang, metadata và vector của B.
 
 [Kiểm tra database mới](../results/repro-check.json) đã chạy trên container tạm, không gắn volume bài lab.
 Dependency được dùng lại từ môi trường sẵn có; cài package và tải model lần đầu chưa được kiểm tra trên máy mới.
+
+## Model trả lời
+
+Thêm `OPENROUTER_API_KEY` vào `.env` Day 7. Cấu hình model, top-k, context budget và giới hạn gọi ở
+`config/agent.json`. API nhận câu hỏi và đoạn text được truy xuất; `.env` và URL database không nằm trong messages.
+Sau bước kiểm tra retrieval, chạy agent theo [README](../README.md#agent-và-context).
+
+Để lặp lại phần 7–8, dùng [lệnh chạy dev, khóa selection và test](../starter/README.md#1-kết-nối-agent).
+[Báo cáo cá nhân](../report/individual/2A202604109_NguyenTrongKhiem.md) ghi lựa chọn baseline, nhãn nguồn và giới hạn so sánh.
